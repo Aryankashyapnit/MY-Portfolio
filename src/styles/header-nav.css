@@ -244,6 +244,48 @@
   color: #ffffff;
 }
 
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-left .location-pill {
+    font-size: 0.62rem;
+    padding: 0.4rem 0.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-links-list {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+    width: 38px;
+    height: 38px;
+  }
+
+  .theme-toggle-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-pill-container {
+    padding: 0.25rem 0.45rem 0.25rem 0.25rem;
+  }
+
+  .nav-cta-btn {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .header-left {
+    display: none;
+  }
+}
+
 /* Mobile Drawer Overlay */
 .mobile-drawer {
   position: fixed;

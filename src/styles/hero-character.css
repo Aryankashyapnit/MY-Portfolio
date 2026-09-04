@@ -175,5 +175,40 @@
 @media (max-width: 768px) {
   .hero-character-container {
     bottom: 12px;
+    right: 0.75rem;
+  }
+
+  .hero-think-walker {
+    width: 110px;
+    height: 140px;
+  }
+
+  .hero-character-bubble {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+    max-width: 220px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+    left: auto;
+    right: -10px;
+    transform: translateY(8px) scale(0.85);
+  }
+
+  .hero-character-bubble::after {
+    left: auto;
+    right: 35px;
+  }
+
+  .hero-character-bubble.show-bubble {
+    transform: translateY(0) scale(1);
+  }
+
+  .hero-character-inner.face-left .hero-character-bubble {
+    transform: translateY(8px) scale(0.85) scaleX(-1);
+  }
+
+  .hero-character-inner.face-left .hero-character-bubble.show-bubble {
+    transform: translateY(0) scale(1) scaleX(-1);
   }
 }
