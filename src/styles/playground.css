@@ -1,0 +1,149 @@
+/* =========================================================
+   SECTION 05: PLAYGROUND (Irregular Wall of Experiments)
+   ========================================================= */
+
+.playground-wall-section {
+  position: relative;
+  background-color: var(--bg-cream);
+  padding: clamp(5rem, 10vw, 9rem) 1.5rem;
+  z-index: 24;
+}
+
+.playground-header-block {
+  max-width: var(--max-width);
+  margin: 0 auto clamp(3.5rem, 6vw, 5rem) auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.playground-title-main {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--text-main);
+}
+
+.playground-subline {
+  font-family: var(--font-mono);
+  font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+}
+
+/* Irregular Asymmetric Wall Grid */
+.playground-irregular-wall {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Base Playful Card */
+.play-card {
+  background: var(--bg-cream-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-cream);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  transition: all var(--duration-fast) var(--ease-spring);
+  cursor: pointer;
+  position: relative;
+}
+
+.play-card:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-cream-strong);
+}
+
+.play-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-xs);
+  background: var(--bg-cream-card);
+  color: var(--text-secondary);
+}
+
+.play-icon-bubble {
+  font-size: 1.3rem;
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+.play-card:hover .play-icon-bubble {
+  transform: scale(1.2) rotate(15deg);
+}
+
+.play-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.play-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.play-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Interactive Mini Widget Inset (Prevents overlay click on input focus) */
+.play-mini-widget {
+  background: var(--bg-cream-card);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 1px dashed var(--border-cream-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  cursor: default;
+}
+
+.play-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-cream);
+  padding-top: 0.8rem;
+}
+
+.play-view-link {
+  color: var(--accent-blue);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+[data-theme="night"] .play-view-link {
+  color: #60a5fa;
+}

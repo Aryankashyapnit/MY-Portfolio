@@ -1,0 +1,252 @@
+/* =========================================================
+   GARDENER 3D SUIT CHARACTER (Footer Meadow Botanical Landscape)
+   ========================================================= */
+
+.gardener-character-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 12;
+  overflow: visible;
+}
+
+.gardener-character-node {
+  position: absolute;
+  bottom: clamp(60px, 12vh, 120px);
+  left: 0;
+  width: clamp(110px, 10vw, 150px);
+  height: clamp(165px, 15vw, 220px);
+  transform: translate3d(-160px, 0, 0);
+  pointer-events: all;
+  cursor: pointer;
+  user-select: none;
+  will-change: transform;
+  transition: opacity 0.3s ease;
+}
+
+.gardener-3d-shadow {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(18, 12, 36, 0.6) 0%, rgba(18, 12, 36, 0.2) 50%, transparent 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+/* Character Images */
+.gardener-img-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transform-origin: center bottom;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  will-change: transform;
+}
+
+.gardener-character-node.face-right .gardener-img-box {
+  transform: scaleX(1);
+}
+
+.gardener-character-node.face-left .gardener-img-box {
+  transform: scaleX(-1);
+}
+
+.gardener-3d-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 10px 22px rgba(10, 6, 24, 0.35));
+  transform-origin: center bottom;
+  transition: opacity 0.25s ease;
+}
+
+.gardener-img-walk {
+  display: block;
+}
+
+.gardener-img-water {
+  display: none;
+}
+
+/* State: Walking */
+.gardener-character-node.is-walking .gardener-img-walk {
+  display: block;
+  animation: gardenerWalkBob 0.42s ease-in-out infinite alternate;
+}
+
+.gardener-character-node.is-walking .gardener-img-water {
+  display: none;
+}
+
+.gardener-character-node.is-walking .gardener-3d-shadow {
+  animation: gardenerShadowBob 0.42s ease-in-out infinite alternate;
+}
+
+/* State: Watering */
+.gardener-character-node.is-watering .gardener-img-walk {
+  display: none;
+}
+
+.gardener-character-node.is-watering .gardener-img-water {
+  display: block;
+  animation: gardenerWaterGently 1.6s ease-in-out infinite alternate;
+}
+
+.gardener-character-node.is-watering .gardener-water-stream-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* State: Celebrating */
+.gardener-character-node.is-celebrating .gardener-3d-img {
+  animation: gardenerJumpHigh 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) infinite alternate;
+}
+
+/* Live Animated Water Stream & Drops overlay */
+.gardener-water-stream-overlay {
+  position: absolute;
+  top: 38%;
+  right: -32px;
+  width: 90px;
+  height: 110px;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.water-stream-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.water-spray-arc {
+  stroke-dasharray: 8 6;
+  animation: sprayArcFlow 0.45s linear infinite;
+}
+
+.water-drop-p {
+  animation: waterDropFall 0.6s ease-in infinite;
+}
+
+.water-ripple-ring {
+  animation: rippleExpand 0.75s ease-out infinite;
+  transform-origin: center;
+}
+
+/* Speech Dialogue Bubble (Always Upright & Non-Mirrored) */
+.gardener-3d-bubble {
+  position: absolute;
+  top: -42px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px) scale(0.85);
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #0f172a;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(0.72rem, 0.88vw, 0.84rem);
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 30;
+  transform-origin: center bottom;
+}
+
+.gardener-3d-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #0f172a;
+}
+
+[data-theme="night"] .gardener-3d-bubble {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="night"] .gardener-3d-bubble::after {
+  border-top-color: #38bdf8;
+}
+
+.gardener-3d-bubble.show-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+/* Flower sparkles */
+.flower-water-sparkles {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.flower-water-sparkles.active {
+  opacity: 1;
+  animation: sparkleFloat 1.2s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes gardenerWalkBob {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1.2deg); }
+  100% { transform: translateY(-1px) rotate(-1.2deg); }
+}
+
+@keyframes gardenerShadowBob {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  100% { transform: translateX(-50%) scale(0.8); opacity: 0.35; }
+}
+
+@keyframes gardenerWaterGently {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-2.5px) rotate(1deg); }
+}
+
+@keyframes gardenerJumpHigh {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-28px) scale(1.04); }
+}
+
+@keyframes sprayArcFlow {
+  0% { stroke-dashoffset: 14; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes waterDropFall {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(12px, 36px); opacity: 0; }
+}
+
+@keyframes rippleExpand {
+  0% { transform: scale(0.2); opacity: 0.9; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+@keyframes sparkleFloat {
+  0% { transform: translateY(0) scale(0.6); opacity: 1; }
+  100% { transform: translateY(-32px) scale(1.3); opacity: 0; }
+}

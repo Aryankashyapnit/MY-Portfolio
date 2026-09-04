@@ -1,0 +1,540 @@
+/* =========================================================
+   SECTION 06: ABOUT ARYAN (Personal Visual Introduction)
+   Rich editorial personal profile with atmospheric midnight lighting,
+   studio portrait framing, tactile stickers & glassmorphic highlights.
+   ========================================================= */
+
+.about-aryan-section {
+  position: relative;
+  background-color: var(--bg-cream);
+  padding: clamp(6rem, 12vw, 11rem) 1.5rem clamp(5rem, 10vw, 9rem) 1.5rem;
+  z-index: 26;
+  overflow: hidden;
+  transition: background-color var(--duration-normal) ease, background var(--duration-normal) ease;
+}
+
+[data-theme="night"] .about-aryan-section {
+  background-color: #080e1b;
+  background-image: 
+    radial-gradient(circle at 25% 45%, rgba(37, 99, 235, 0.15) 0%, transparent 55%),
+    radial-gradient(circle at 80% 65%, rgba(139, 92, 246, 0.10) 0%, transparent 48%),
+    radial-gradient(circle at 65% 15%, rgba(14, 116, 144, 0.08) 0%, transparent 45%);
+}
+
+/* Atmospheric Ambient Background Layer */
+.about-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity var(--duration-slow) ease;
+}
+
+[data-theme="night"] .about-atmosphere {
+  opacity: 1;
+}
+
+.about-ambient-glow {
+  position: absolute;
+  top: 40%;
+  left: 28%;
+  width: clamp(320px, 45vw, 650px);
+  height: clamp(320px, 45vw, 650px);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.16) 0%, rgba(30, 58, 138, 0.06) 55%, transparent 75%);
+  filter: blur(55px);
+}
+
+.about-secondary-glow {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  width: clamp(260px, 35vw, 500px);
+  height: clamp(260px, 35vw, 500px);
+  transform: translate(50%, -50%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+  filter: blur(50px);
+}
+
+.about-decor-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #93c5fd;
+}
+
+.about-decor-circle {
+  opacity: 0.14;
+}
+
+.about-decor-line {
+  opacity: 0.12;
+}
+
+.about-decor-dot {
+  fill: #60a5fa;
+  opacity: 0.4;
+  filter: drop-shadow(0 0 6px #60a5fa);
+}
+
+.about-sparkle {
+  fill: #93c5fd;
+  opacity: 0.3;
+  animation: aboutSparkleTwinkle 5s ease-in-out infinite alternate;
+}
+
+.sparkle-delay {
+  animation-delay: 2.5s;
+  animation-duration: 6s;
+}
+
+@keyframes aboutSparkleTwinkle {
+  0% { opacity: 0.15; transform: scale(0.9) rotate(0deg); }
+  50% { opacity: 0.7; transform: scale(1.2) rotate(90deg); filter: drop-shadow(0 0 8px #93c5fd); }
+  100% { opacity: 0.15; transform: scale(0.9) rotate(180deg); }
+}
+
+.about-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(3rem, 6.5vw, 6.5rem);
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* =========================================================
+   LARGE PORTRAIT & TACTILE STICKER CARDS
+   ========================================================= */
+.about-portrait-wrapper {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-avatar-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.12;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #cbd5e1;
+  border: 4px solid var(--bg-cream-surface);
+  box-shadow: 
+    0 24px 60px rgba(0, 0, 0, 0.14),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform var(--duration-normal) var(--ease-smooth), box-shadow var(--duration-normal) var(--ease-smooth);
+}
+
+[data-theme="night"] .about-avatar-frame {
+  border: 3px solid rgba(255, 255, 255, 0.14);
+  background: #1e293b;
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 35px rgba(59, 130, 246, 0.18),
+    inset 0 0 20px rgba(255, 255, 255, 0.04);
+}
+
+.about-portrait-wrapper:hover .about-avatar-frame {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 
+    0 35px 80px rgba(0, 0, 0, 0.22),
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="night"] .about-portrait-wrapper:hover .about-avatar-frame {
+  box-shadow: 
+    0 40px 90px rgba(0, 0, 0, 0.65),
+    0 0 45px rgba(59, 130, 246, 0.3);
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform var(--duration-slow) var(--ease-smooth);
+}
+
+.about-portrait-wrapper:hover .about-avatar-img {
+  transform: scale(1.05);
+}
+
+.about-avatar-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+}
+
+[data-theme="night"] .about-avatar-overlay {
+  background: linear-gradient(180deg, transparent 55%, rgba(8, 14, 27, 0.5) 100%);
+}
+
+/* Floating Tactile Sticky Note Stickers */
+.avatar-sticky-note {
+  position: absolute;
+  font-family: var(--font-hand);
+  font-size: 1.35rem;
+  font-weight: 700;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+  transition: transform var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast) ease;
+  user-select: none;
+  cursor: default;
+}
+
+.about-portrait-wrapper:hover .avatar-sticky-note {
+  transform: scale(1.08) translateY(-4px);
+}
+
+.note-top-left {
+  top: -15px;
+  left: -18px;
+  background: #fef08a;
+  color: #713f12;
+  transform: rotate(-10deg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="night"] .note-top-left {
+  background: #fde047;
+  color: #422006;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(253, 224, 71, 0.35);
+}
+
+.note-bottom-right {
+  bottom: 35px;
+  right: -24px;
+  background: #fecdd3;
+  color: #881337;
+  transform: rotate(8deg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="night"] .note-bottom-right {
+  background: #fda4af;
+  color: #4c0519;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(251, 113, 133, 0.35);
+}
+
+.note-bottom-left {
+  bottom: 70px;
+  left: -24px;
+  background: #dcfce7;
+  color: #14532d;
+  transform: rotate(-6deg);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="night"] .note-bottom-left {
+  background: #86efac;
+  color: #052e16;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 16px rgba(134, 239, 172, 0.35);
+}
+
+/* Portrait Bottom Location Badge */
+.about-location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 1.6rem;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+[data-theme="night"] .about-location-badge {
+  background: rgba(15, 23, 42, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+}
+
+.about-status-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulseStatusGreen 2s infinite;
+}
+
+@keyframes pulseStatusGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 6px #22c55e; }
+  70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 6px #22c55e; }
+}
+
+/* =========================================================
+   NARRATIVE & HIGHLIGHTS COLUMN
+   ========================================================= */
+.about-narrative-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.about-badge-small {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent-blue);
+  text-transform: uppercase;
+}
+
+.about-badge-dot {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+}
+
+[data-theme="night"] .about-badge-small {
+  color: #60a5fa;
+}
+
+[data-theme="night"] .about-badge-dot {
+  color: #38bdf8;
+  text-shadow: 0 0 8px #38bdf8;
+  animation: pulseCyanDot 2.4s infinite ease-in-out;
+}
+
+.about-greeting-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5.2vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  color: var(--text-main);
+}
+
+.about-name-highlight {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 60%, #fde047 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 0 30px rgba(245, 158, 11, 0.25);
+}
+
+[data-theme="night"] .about-name-highlight {
+  background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 50%, #facc15 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(96, 165, 250, 0.35));
+}
+
+.about-bio-body {
+  font-size: clamp(1.02rem, 1.4vw, 1.18rem);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.about-bio-body strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* Core Highlights / Pillars Strip */
+.about-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.about-highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--bg-cream-surface);
+  border: 1px solid var(--border-cream);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-fast) var(--ease-smooth);
+}
+
+[data-theme="night"] .about-highlight-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.about-highlight-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-cream-strong);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="night"] .about-highlight-card:hover {
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 16px rgba(96, 165, 250, 0.15);
+}
+
+.highlight-icon {
+  font-size: 1.4rem;
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: var(--radius-md);
+  background: var(--bg-cream-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="night"] .highlight-icon {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.highlight-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.highlight-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-blue);
+}
+
+[data-theme="night"] .highlight-title {
+  color: #60a5fa;
+}
+
+.highlight-desc {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Glassmorphic Meta Chips */
+.about-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.4rem;
+}
+
+.about-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  background: var(--bg-cream-card);
+  border: 1px solid var(--border-cream);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all var(--duration-fast) var(--ease-smooth);
+  cursor: default;
+}
+
+.chip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-yellow);
+}
+
+.about-meta-chip:hover {
+  border-color: var(--border-cream-strong);
+  transform: translateY(-2px);
+}
+
+[data-theme="night"] .about-meta-chip {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme="night"] .about-meta-chip .chip-dot {
+  background: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+}
+
+[data-theme="night"] .about-meta-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(96, 165, 250, 0.35);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 10px rgba(96, 165, 250, 0.18);
+}
+
+/* =========================================================
+   RESPONSIVE LAYOUT
+   ========================================================= */
+@media (max-width: 960px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .about-portrait-wrapper {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-portrait-wrapper {
+    max-width: 100%;
+  }
+
+  .avatar-sticky-note {
+    font-size: 1.15rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .note-top-left {
+    top: -12px;
+    left: -10px;
+  }
+
+  .note-bottom-right {
+    bottom: 25px;
+    right: -10px;
+  }
+
+  .note-bottom-left {
+    bottom: -12px;
+    left: 10px;
+  }
+
+  .about-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,179 @@
+/* =========================================================
+   HERO 3D SUIT CHARACTER (Sitting on Cloud & Thinking Creative Ideas)
+   ========================================================= */
+
+.hero-character-container {
+  position: absolute;
+  bottom: clamp(20px, 4.2vh, 48px);
+  right: clamp(1.5rem, 12vw, 140px);
+  z-index: 30;
+  pointer-events: all;
+  cursor: pointer;
+  transform: none;
+  user-select: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-character-container:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.hero-character-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transform-origin: center bottom;
+}
+
+/* Ground shadow underneath cloud */
+.hero-character-shadow {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%) scale(1.15);
+  width: 95px;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(15, 23, 42, 0.45) 0%, rgba(15, 23, 42, 0.15) 50%, transparent 80%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: heroShadowFloat 3.2s ease-in-out infinite alternate;
+}
+
+/* Sitting on Cloud & Thinking Character */
+.hero-think-walker {
+  display: block;
+  width: clamp(130px, 12vw, 170px);
+  height: clamp(165px, 15vw, 210px);
+  background-image: url('/assets/aryan-hero-think.jpg');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0 14px 28px rgba(15, 23, 42, 0.28));
+  transform-origin: center bottom;
+  mix-blend-mode: multiply;
+  animation: heroFloatCloud 3.2s ease-in-out infinite alternate;
+}
+
+[data-theme="night"] .hero-think-walker {
+  mix-blend-mode: normal;
+}
+
+/* Floating Idea Sparkles & Particles */
+.hero-thought-glow {
+  position: absolute;
+  top: -24px;
+  right: -12px;
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease;
+}
+
+.idea-star {
+  position: absolute;
+  animation: ideaFloatSparkle 2.2s ease-in-out infinite alternate;
+}
+
+.idea-star-1 { top: 0; right: 12px; font-size: 20px; animation-delay: 0s; }
+.idea-star-2 { top: 22px; right: -8px; font-size: 15px; animation-delay: 0.6s; }
+.idea-star-3 { top: -14px; right: 30px; font-size: 17px; animation-delay: 1.2s; }
+
+/* Speech / Thought Dialogue Bubble */
+.hero-character-bubble {
+  position: absolute;
+  top: -46px;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px) scale(0.85);
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.8px solid #0f172a;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.2);
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-family: var(--font-heading, 'Outfit', sans-serif);
+  font-size: clamp(0.74rem, 0.88vw, 0.85rem);
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 35;
+  transform-origin: center bottom;
+}
+
+/* Prevent text flipping when parent is mirrored */
+.hero-character-inner.face-left .hero-character-bubble {
+  transform: translateX(-50%) translateY(8px) scale(0.85) scaleX(-1);
+}
+
+.hero-character-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #0f172a;
+}
+
+[data-theme="night"] .hero-character-bubble {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #38bdf8;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="night"] .hero-character-bubble::after {
+  border-top-color: #38bdf8;
+}
+
+.hero-character-bubble.show-bubble {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.hero-character-inner.face-left .hero-character-bubble.show-bubble {
+  transform: translateX(-50%) translateY(0) scale(1) scaleX(-1);
+}
+
+/* Animations - Bobbing applied without overriding scaleX */
+@keyframes heroWalkingVerticalBob {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+@keyframes heroShadowPulse {
+  0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
+  100% { transform: translateX(-50%) scale(0.82); opacity: 0.28; }
+}
+
+@keyframes heroFloatCloud {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-9px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes heroShadowFloat {
+  0% { transform: translateX(-50%) scale(1.15); opacity: 0.45; }
+  50% { transform: translateX(-50%) scale(0.92); opacity: 0.28; }
+  100% { transform: translateX(-50%) scale(1.15); opacity: 0.45; }
+}
+
+@keyframes ideaFloatSparkle {
+  0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0.7; }
+  50% { transform: translateY(-7px) scale(1.15) rotate(14deg); opacity: 1; }
+  100% { transform: translateY(-2px) scale(0.9) rotate(-8deg); opacity: 0.8; }
+}
+
+@media (max-width: 768px) {
+  .hero-character-container {
+    bottom: 12px;
+  }
+}

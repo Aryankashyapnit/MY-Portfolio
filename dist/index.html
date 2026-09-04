@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aryan — Developer & Product Builder</title>
+  <meta name="description" content="Creative developer & product builder portfolio of Aryan Kumar. Crafting BiharEduConnect, Decide, BEUCampus, and practical digital tools.">
+  
+  <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Space Grotesk, Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-CnWWbzyF.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Bce6kdSb.css">
+</head>
+<body>
+
+  <!-- Floating Header & Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Left: Status & Location -->
+      <div class="header-left">
+        <div class="location-pill">
+          <span class="status-dot"></span>
+          <span>NIT AGARTALA • INDIA</span>
+        </div>
+      </div>
+
+      <!-- Center: Floating Pill Nav -->
+      <div class="header-center">
+        <nav class="nav-pill-container" aria-label="Main Navigation">
+          <a href="#hero" class="nav-avatar-link" title="Aryan Kumar">
+            <img src="/assets/aryan-avatar.jpg" alt="Aryan" class="nav-avatar-img" width="34" height="34">
+          </a>
+          <ul class="nav-links-list">
+            <li><a href="#work" class="nav-item-link">Work</a></li>
+            <li><a href="#about" class="nav-item-link">About</a></li>
+            <li><a href="#playground" class="nav-item-link">Playground</a></li>
+            <li><a href="#philosophy" class="nav-item-link">Philosophy</a></li>
+          </ul>
+          <a href="#contact" class="nav-cta-btn">
+            <span>Let's Talk</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Right: Theme Switcher & Mobile Menu Trigger -->
+      <div class="header-right">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle visual theme" title="Toggle Day/Night Mode">
+          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Open mobile menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-inner">
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-cream); padding-bottom: 1rem;">
+        <span class="mono-tag" style="color: var(--accent-blue);">MENU</span>
+        <button id="closeDrawerBtn" style="font-size: 1.5rem; font-weight: 700; color: var(--text-main);">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#work" class="mobile-nav-link">Selected Work</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Aryan</a></li>
+        <li><a href="#playground" class="mobile-nav-link">Playground & Lab</a></li>
+        <li><a href="#philosophy" class="mobile-nav-link">Philosophy</a></li>
+        <li><a href="#contact" class="mobile-nav-link" style="color: var(--accent-blue);">Let's Build It →</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- =========================================================
+         SECTION 01: SKY HERO (REFERENCE ACCURATE)
+         ========================================================= -->
+    <section id="hero" class="hero-section">
+      <div class="hero-atmosphere">
+        <canvas id="nightSkyCanvas" class="night-sky-canvas" aria-hidden="true"></canvas>
+      </div>
+
+      <!-- Distributed Natural Clouds Across Entire Sky -->
+      <svg class="hero-cloud-corner-tl" viewBox="0 0 160 80" fill="none" aria-hidden="true">
+        <path d="M20 60 C10 60, 5 50, 8 40 C12 30, 25 25, 35 28 C42 18, 58 12, 75 18 C88 8, 110 12, 122 25 C132 25, 145 32, 145 45 C145 55, 135 60, 125 60 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-top-left-2" viewBox="0 0 130 65" fill="none" aria-hidden="true">
+        <path d="M16 48 C8 48, 4 40, 7 32 C11 22, 22 18, 31 22 C37 12, 50 8, 64 12 C75 5, 92 8, 102 20 C110 20, 120 26, 120 36 C120 44, 112 48, 104 48 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-top-center" viewBox="0 0 140 70" fill="none" aria-hidden="true">
+        <path d="M18 52 C8 52, 4 42, 8 34 C12 24, 24 20, 34 24 C40 14, 55 10, 70 14 C82 6, 102 10, 112 22 C122 22, 132 28, 132 40 C132 48, 124 52, 114 52 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-top-right-2" viewBox="0 0 150 75" fill="none" aria-hidden="true">
+        <path d="M18 58 C8 58, 4 48, 8 38 C12 28, 24 24, 34 26 C40 16, 56 12, 72 16 C84 8, 104 12, 115 24 C124 24, 136 30, 136 42 C136 52, 126 58, 116 58 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-mid-left-small" viewBox="0 0 180 85" fill="none" aria-hidden="true">
+        <path d="M22 65 C12 65, 6 54, 10 44 C15 32, 28 26, 40 30 C48 18, 66 12, 85 18 C100 8, 125 12, 138 26 C148 26, 162 34, 162 48 C162 60, 150 65, 138 65 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-mid-center-1" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+        <path d="M15 45 C7 45, 3 38, 6 30 C10 20, 20 16, 28 20 C34 10, 46 6, 58 10 C68 4, 84 6, 92 16 C100 16, 110 22, 110 32 C110 40, 102 45, 94 45 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-mid-center-2" viewBox="0 0 130 65" fill="none" aria-hidden="true">
+        <path d="M16 48 C8 48, 4 40, 7 32 C11 22, 22 18, 31 22 C37 12, 50 8, 64 12 C75 5, 92 8, 102 20 C110 20, 120 26, 120 36 C120 44, 112 48, 104 48 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-lower-left" viewBox="0 0 150 75" fill="none" aria-hidden="true">
+        <path d="M18 58 C8 58, 4 48, 8 38 C12 28, 24 24, 34 26 C40 16, 56 12, 72 16 C84 8, 104 12, 115 24 C124 24, 136 30, 136 42 C136 52, 126 58, 116 58 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-bottom-left-2" viewBox="0 0 140 70" fill="none" aria-hidden="true">
+        <path d="M18 52 C8 52, 4 42, 8 34 C12 24, 24 20, 34 24 C40 14, 55 10, 70 14 C82 6, 102 10, 112 22 C122 22, 132 28, 132 40 C132 48, 124 52, 114 52 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-bottom-center" viewBox="0 0 160 80" fill="none" aria-hidden="true">
+        <path d="M20 60 C10 60, 5 50, 8 40 C12 30, 25 25, 35 28 C42 18, 58 12, 75 18 C88 8, 110 12, 122 25 C132 25, 145 32, 145 45 C145 55, 135 60, 125 60 Z" fill="#ffffff"/>
+      </svg>
+
+      <!-- Mid-Right Cloud Bank Behind & Under Sun -->
+      <svg class="hero-cloud-sun-mid" viewBox="0 0 580 260" fill="none" aria-hidden="true">
+        <path d="M80 210 C50 210, 25 185, 30 155 C35 125, 65 105, 100 110 C120 70, 175 45, 230 60 C280 30, 350 40, 390 85 C435 75, 485 105, 490 150 C520 155, 545 180, 540 210 Z" fill="#ffffff"/>
+      </svg>
+
+      <!-- Small Floating Clouds on Right Sky -->
+      <svg class="hero-cloud-small-right-1" viewBox="0 0 160 80" fill="none" aria-hidden="true">
+        <path d="M20 60 C10 60, 5 50, 8 40 C12 30, 25 25, 35 28 C42 18, 58 12, 75 18 C88 8, 110 12, 122 25 C132 25, 145 32, 145 45 C145 55, 135 60, 125 60 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-small-right-2" viewBox="0 0 200 90" fill="none" aria-hidden="true">
+        <path d="M25 70 C12 70, 5 58, 10 46 C15 34, 30 28, 44 32 C52 20, 72 14, 94 20 C110 8, 138 12, 154 28 C166 28, 182 36, 182 52 C182 64, 170 70, 156 70 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-small-right-3" viewBox="0 0 140 70" fill="none" aria-hidden="true">
+        <path d="M18 52 C8 52, 4 42, 8 34 C12 24, 24 20, 34 24 C40 14, 55 10, 70 14 C82 6, 102 10, 112 22 C122 22, 132 28, 132 40 C132 48, 124 52, 114 52 Z" fill="#ffffff"/>
+      </svg>
+      <svg class="hero-cloud-lower-right-extra" viewBox="0 0 130 65" fill="none" aria-hidden="true">
+        <path d="M16 48 C8 48, 4 40, 7 32 C11 22, 22 18, 31 22 C37 12, 50 8, 64 12 C75 5, 92 8, 102 20 C110 20, 120 26, 120 36 C120 44, 112 48, 104 48 Z" fill="#ffffff"/>
+      </svg>
+
+      <!-- Hand-painted Chalk / Brush Stroke Sweeps (Reference Aesthetic) -->
+      <svg class="hero-brush-strokes-svg" viewBox="0 0 1440 800" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <!-- Mid sky sweeping stroke -->
+        <path class="brush-stroke brush-stroke-dashed" d="M80 620 Q 260 590, 440 680" opacity="0.7"/>
+        <path class="brush-stroke brush-stroke-solid" d="M380 720 Q 420 680, 460 700" opacity="0.65"/>
+        <!-- Right side chalk wave strokes -->
+        <path class="brush-stroke brush-stroke-dashed" d="M960 740 Q 1100 680, 1260 760" opacity="0.75"/>
+        <path class="brush-stroke brush-stroke-solid" d="M1120 720 Q 1180 670, 1220 730" opacity="0.8"/>
+      </svg>
+
+      <!-- Yellow Striped Sun Disc (Top Right in Upper Sky) -->
+      <div class="hero-sun-disc" aria-hidden="true"></div>
+
+      <!-- Vertical Label -->
+      <div class="hero-vertical-tag" aria-hidden="true">
+        <span>PRODUCT / CODE / CRAFT</span>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="hero-container">
+        <div class="hero-intro-pill">
+          <span class="intro-dot"></span>
+          <span>HELLO, I'M ARYAN KUMAR · DEVELOPER & BUILDER</span>
+        </div>
+
+        <div class="hero-editorial-title">
+          <h1 class="hero-line-top">Builder <span class="hero-accent-who">who</span></h1>
+          
+          <div class="hero-line-bottom">
+            <!-- Retro Cassette Audio Player Widget -->
+            <div id="heroAudioWidget" class="hero-audio-widget">
+              <div class="vinyl-spool" aria-hidden="true"></div>
+              
+              <div class="audio-center-info">
+                <div class="audio-track-title">My builder journey, decoded</div>
+                <div class="audio-track-subtitle">Aryan Kumar • Builder / Developer</div>
+                <div id="audioProgressBar" class="audio-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                  <div id="audioProgressFill" class="audio-progress-fill" style="width: 0%;"></div>
+                </div>
+                <div class="audio-time-row">
+                  <span id="audioCurrentTime">0:00</span>
+                  <span id="audioTotalDuration">2:15</span>
+                </div>
+              </div>
+
+              <button id="audioPlayBtn" class="audio-play-btn" aria-label="Play audio track">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+
+              <div class="vinyl-spool" aria-hidden="true"></div>
+            </div>
+
+            <!-- Rotating Word Slot -->
+            <div class="hero-rotating-container">
+              <span id="heroRotatingWord" class="hero-rotating-word">Solves</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Multi-layered Natural Bottom Clouds (Reference Matched) -->
+      <svg class="hero-clouds-landscape-bottom" viewBox="0 0 1440 190" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <!-- Back soft translucent clouds -->
+        <path class="cloud-layer-back" d="M0,80 C180,25 360,110 560,65 C780,15 960,85 1160,40 C1320,10 1400,60 1440,45 L1440,190 L0,190 Z"/>
+        <!-- Mid white cloud bank -->
+        <path class="cloud-layer-mid" d="M0,105 C240,60 450,130 720,85 C980,45 1180,110 1440,75 L1440,190 L0,190 Z"/>
+        <!-- Front transition cloud hills -->
+        <path class="cloud-layer-front" d="M0,135 C280,95 520,155 820,115 C1080,80 1280,140 1440,115 L1440,190 L0,190 Z"/>
+      </svg>
+
+      <!-- 3D Suit Animated Character Sitting & Thinking on Floating Cloud -->
+      <div id="heroCharacterContainer" class="hero-character-container is-thinking" role="button" aria-label="Aryan thinking on cloud">
+        <div class="hero-character-inner">
+          <div class="hero-character-shadow"></div>
+          <!-- Sitting on Cloud Thinking Walker -->
+          <div id="heroThinkWalker" class="hero-think-walker"></div>
+          <!-- Thought sparks on right -->
+          <div class="hero-thought-glow" aria-hidden="true">
+            <span class="idea-star idea-star-1">💡</span>
+            <span class="idea-star idea-star-2">✨</span>
+            <span class="idea-star idea-star-3">💭</span>
+          </div>
+          <div id="heroCharacterBubble" class="hero-character-bubble">💡 Building products that make complex things simpler</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 02: WHAT I BUILD (Spacious Editorial Statement)
+         ========================================================= -->
+    <section class="editorial-statement-section">
+      <!-- Atmospheric Ambient & Celestial Background Layer (Night Mode) -->
+      <div class="statement-atmosphere" aria-hidden="true">
+        <div class="statement-ambient-glow"></div>
+        <svg class="statement-constellation-svg" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
+          <!-- Subtle Constellation Nodes & Connecting Rays -->
+          <g class="constellation-group">
+            <line x1="140" y1="120" x2="260" y2="80" stroke="currentColor" stroke-dasharray="3 4" class="const-line" />
+            <line x1="260" y1="80" x2="340" y2="160" stroke="currentColor" stroke-dasharray="3 4" class="const-line" />
+            <circle cx="140" cy="120" r="2.5" class="const-star const-star-pulse" />
+            <circle cx="260" cy="80" r="3" class="const-star" />
+            <circle cx="340" cy="160" r="2" class="const-star" />
+          </g>
+          
+          <g class="constellation-group" transform="translate(1000, 40)">
+            <line x1="60" y1="40" x2="180" y2="90" stroke="currentColor" stroke-dasharray="3 4" class="const-line" />
+            <line x1="180" y1="90" x2="280" y2="40" stroke="currentColor" stroke-dasharray="3 4" class="const-line" />
+            <line x1="280" y1="40" x2="360" y2="120" stroke="currentColor" stroke-dasharray="3 4" class="const-line" />
+            <circle cx="60" cy="40" r="2" class="const-star" />
+            <circle cx="180" cy="90" r="3" class="const-star const-star-pulse" />
+            <circle cx="280" cy="40" r="2.5" class="const-star" />
+            <circle cx="360" cy="120" r="2" class="const-star" />
+          </g>
+
+          <!-- Subtle 4-Point Editorial Sparkles -->
+          <path class="editorial-sparkle sparkle-1" d="M 1240,240 Q 1240,250 1250,250 Q 1240,250 1240,260 Q 1240,250 1230,250 Q 1240,250 1240,240 Z" />
+          <path class="editorial-sparkle sparkle-2" d="M 180,420 Q 180,428 188,428 Q 180,428 180,436 Q 180,428 172,428 Q 180,428 180,420 Z" />
+        </svg>
+      </div>
+
+      <div class="statement-container">
+        <div class="statement-annotation-top reveal-on-scroll">
+          <span class="statement-top-dot">●</span>
+          <span>01 — WHAT I BUILD</span>
+        </div>
+
+        <h2 class="statement-headline-huge reveal-on-scroll">
+          I build digital products that make <span class="serif-italic">complicated things</span> feel a little simpler.
+          <span class="statement-handwritten-note">"zero fluff"</span>
+        </h2>
+
+        <!-- Scattered Editorial Concept Tags -->
+        <div class="statement-cloud-tags reveal-on-scroll delay-1">
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>PRODUCT ARCHITECTURE</span>
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>CODE</span>
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>EXPERIMENTAL UI</span>
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>STUDENT ECOSYSTEMS</span>
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>CONVERSATIONAL AI</span>
+          <span class="editorial-tag-item"><span class="editorial-tag-dot"></span>STATE ADMISSIONS</span>
+        </div>
+
+        <!-- Hand-drawn curved arrow SVG -->
+        <svg class="statement-arrow-svg" viewBox="0 0 160 80" fill="none" aria-hidden="true">
+          <path class="statement-arrow-path" d="M10 20 Q 80 80 145 35" />
+          <polygon points="145,28 155,36 142,42" fill="currentColor" opacity="0.6"/>
+        </svg>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 03: SELECTED WORK (Interactive Orbital Project Wheel)
+         ========================================================= -->
+    <section id="work" class="selected-work-wheel-section">
+      <div class="container">
+        <!-- Section Header -->
+        <header class="wheel-section-header reveal-on-scroll">
+          <div class="wheel-header-left">
+            <div class="wheel-section-tag">SELECTED WORK</div>
+            <h2 class="wheel-title-main">Things I've built.</h2>
+            <p class="wheel-title-caption">Explore the products, experiments and systems I've turned into reality.</p>
+          </div>
+
+          <div class="wheel-header-right">
+            <div class="wheel-counter-badge">
+              <span class="counter-label">ACTIVE PROJECT</span>
+              <span class="wheel-active-count" id="wheelHeaderCounter">01 / 11</span>
+            </div>
+
+            <button class="auto-orbit-toggle active" id="autoOrbitToggle" aria-pressed="true" title="Toggle Auto Orbit">
+              <span class="toggle-orbit-icon" aria-hidden="true"></span>
+              <span class="toggle-text">AUTO ORBIT:</span>
+              <span class="toggle-status-text">ON</span>
+            </button>
+          </div>
+        </header>
+
+        <!-- Main Showcase Grid (Orbital Wheel + Spotlight) -->
+        <div class="wheel-showcase-grid">
+
+          <!-- Left: Orbital Wheel Stage -->
+          <div class="wheel-orbit-stage" id="projectWheelStage" aria-label="Interactive Orbital Project Wheel: Drag or click to spin">
+            <!-- Background Rings & Markings -->
+            <div class="orbit-bg-elements" aria-hidden="true">
+              <div class="orbit-ring orbit-ring-outer"></div>
+              <div class="orbit-ring orbit-ring-mid"></div>
+              <div class="orbit-ring orbit-ring-inner"></div>
+              <div class="orbit-crosshair crosshair-h"></div>
+              <div class="orbit-crosshair crosshair-v"></div>
+            </div>
+
+            <!-- Rotatable Wheel Disk with All 11 Nodes -->
+            <div class="wheel-disk" id="projectWheelDisk" role="region" aria-label="Orbital Project Selector"></div>
+
+            <!-- Center Architectural Dial & Pointer -->
+            <div class="wheel-center-hub" aria-hidden="true">
+              <div class="center-hub-ring-outer"></div>
+              <div class="center-hub-ring-inner"></div>
+              <div class="center-compass-pointer" id="wheelCenterPointer">
+                <span class="compass-tip"></span>
+              </div>
+              <div class="center-hub-content">
+                <span class="center-hub-brand">ARYAN</span>
+                <span class="center-hub-counter" id="wheelCenterCounter">01 / 11</span>
+                <span class="center-hub-hint">DRAG TO SPIN</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Active Project Spotlight -->
+          <div class="wheel-spotlight-container">
+            <div class="spotlight-card" id="wheelSpotlightCard" aria-live="polite">
+              <!-- Dynamically populated by project-wheel.js -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Toolbar & Quick Navigation -->
+        <footer class="wheel-bottom-toolbar">
+          <div class="wheel-nav-controls">
+            <button class="wheel-nav-btn" id="wheelPrevBtn" aria-label="Previous Project">
+              <span aria-hidden="true">←</span>
+              <span>Previous</span>
+            </button>
+            <button class="wheel-nav-btn" id="wheelNextBtn" aria-label="Next Project">
+              <span>Next</span>
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+
+          <div class="wheel-quick-nav-dots" id="wheelQuickNavDots" role="tablist" aria-label="Quick jump to project">
+            <!-- 11 clickable indicator dots populated by project-wheel.js -->
+          </div>
+
+          <span class="wheel-drag-hint">✦ DRAG / SCROLL / ARROWS TO EXPLORE</span>
+        </footer>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 04: PROCESS / HOW I BUILD (Editorial Diagram)
+         ========================================================= -->
+    <section class="workflow-section">
+      <div class="workflow-container">
+        <header class="workflow-header reveal-on-scroll">
+          <div class="mono-tag" style="color: var(--accent-blue); margin-bottom: 0.5rem;">02 — HOW I BUILD</div>
+          <h2 class="workflow-title">The Product Process</h2>
+        </header>
+
+        <div class="workflow-diagram-grid reveal-on-scroll">
+          <div class="workflow-step-node">
+            <div class="step-num-display">01</div>
+            <h3 class="step-title-text">Find the Problem</h3>
+            <p class="step-desc-text">Identify acute real-world friction where users are bogged down by opaque data or messy workflows.</p>
+          </div>
+
+          <div class="workflow-step-node">
+            <div class="step-num-display">02</div>
+            <h3 class="step-title-text">Understand User</h3>
+            <p class="step-desc-text">Map the exact journey, edge cases, and emotional stakes of students or daily operators.</p>
+          </div>
+
+          <div class="workflow-step-node">
+            <div class="step-num-display">03</div>
+            <h3 class="step-title-text">Design Experience</h3>
+            <p class="step-desc-text">Craft high-clarity typography, intuitive touch targets, and eliminate unnecessary UI noise.</p>
+          </div>
+
+          <div class="workflow-step-node">
+            <div class="step-num-display">04</div>
+            <h3 class="step-title-text">Build Product</h3>
+            <p class="step-desc-text">Architect robust database models, fast APIs, and responsive frontends that perform reliably.</p>
+          </div>
+
+          <div class="workflow-step-node">
+            <div class="step-num-display">05</div>
+            <h3 class="step-title-text">Iterate & Polish</h3>
+            <p class="step-desc-text">Refine micro-interactions, optimize loading states, and continuously shave off friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 05: PLAYGROUND (Fun Irregular Wall of Experiments)
+         ========================================================= -->
+    <section id="playground" class="playground-wall-section">
+      <div class="container">
+        <header class="playground-header-block reveal-on-scroll">
+          <div>
+            <h2 class="playground-title-main">Playground</h2>
+            <p class="playground-subline">Small experiments, strange ideas, useful things.</p>
+          </div>
+          <span class="mono-tag" style="color: var(--accent-blue);">03 — CREATIVE LAB</span>
+        </header>
+
+        <div class="playground-irregular-wall">
+
+          <!-- Experiment 1: Zameen Calculator (Interactive) -->
+          <div class="play-card reveal-on-scroll" data-project-id="zameen-calculator">
+            <div class="play-card-top">
+              <span class="play-badge">REGIONAL UTILITY</span>
+              <span class="play-icon-bubble">📐</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">Zameen Calculator</h3>
+              <p class="play-desc">Bihar regional land measurement converter calculating Katha & Dhur into exact Square Feet.</p>
+
+              <div class="play-mini-widget" onclick="event.stopPropagation()">
+                <div class="interactive-zameen-inputs">
+                  <div>
+                    <label class="sr-only" for="zameenKathaInput">Katha</label>
+                    <input id="zameenKathaInput" type="number" class="widget-input" value="2" placeholder="Katha" min="0">
+                  </div>
+                  <div>
+                    <label class="sr-only" for="zameenDhurInput">Dhur</label>
+                    <input id="zameenDhurInput" type="number" class="widget-input" value="10" placeholder="Dhur" min="0">
+                  </div>
+                </div>
+                <div class="widget-result-text">
+                  = <span id="zameenResultSqft">3,403.1 Sq. Ft</span>
+                </div>
+              </div>
+            </div>
+            <div class="play-card-footer">
+              <span>TypeScript / Math</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+          <!-- Experiment 2: MemeSoundboard (Interactive) -->
+          <div class="play-card reveal-on-scroll delay-1" data-project-id="memesoundboard">
+            <div class="play-card-top">
+              <span class="play-badge">AUDIO PLAYGROUND</span>
+              <span class="play-icon-bubble">🔊</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">MemeSoundboard</h3>
+              <p class="play-desc">Low-latency web audio soundboard with synthesized effects and instant keyboard triggers.</p>
+
+              <div class="play-mini-widget" onclick="event.stopPropagation()">
+                <div class="soundboard-buttons-row">
+                  <button class="sound-chip-btn" data-sound="vine-boom">Boom 💥</button>
+                  <button class="sound-chip-btn" data-sound="bruh">Bruh 🗿</button>
+                  <button class="sound-chip-btn" data-sound="airhorn">Horn 📯</button>
+                  <button class="sound-chip-btn" data-sound="level-up">Level Up ✨</button>
+                </div>
+              </div>
+            </div>
+            <div class="play-card-footer">
+              <span>Web Audio API</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+          <!-- Experiment 3: CollegeAchiever -->
+          <div class="play-card reveal-on-scroll delay-2" data-project-id="collegeachiver">
+            <div class="play-card-top">
+              <span class="play-badge">AI COUNSELLING</span>
+              <span class="play-icon-bubble">🎓</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">CollegeAchiever</h3>
+              <p class="play-desc">JoSAA admission rank forecaster analyzing round cutoffs across IITs, NITs, and IIITs.</p>
+            </div>
+            <div class="play-card-footer">
+              <span>Next.js / JoSAA</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+          <!-- Experiment 4: Git Connect -->
+          <div class="play-card reveal-on-scroll" data-project-id="git-connect">
+            <div class="play-card-top">
+              <span class="play-badge">DEV TOOL</span>
+              <span class="play-icon-bubble">🐙</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">Git Connect</h3>
+              <p class="play-desc">Campus developer networking and repository collaboration bridge based on shared tech stacks.</p>
+            </div>
+            <div class="play-card-footer">
+              <span>GitHub API / Node</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+          <!-- Experiment 5: SmartKitchen -->
+          <div class="play-card reveal-on-scroll delay-1" data-project-id="smartkitchen">
+            <div class="play-card-top">
+              <span class="play-badge">SMART HOME</span>
+              <span class="play-icon-bubble">🍳</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">SmartKitchen</h3>
+              <p class="play-desc">Pantry inventory management and automated meal preparation assistant for students.</p>
+            </div>
+            <div class="play-card-footer">
+              <span>React / LocalStorage</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+          <!-- Experiment 6: LabEase -->
+          <div class="play-card reveal-on-scroll delay-2" data-project-id="labease">
+            <div class="play-card-top">
+              <span class="play-badge">ACADEMICS</span>
+              <span class="play-icon-bubble">🧪</span>
+            </div>
+            <div class="play-card-body">
+              <h3 class="play-title">LabEase</h3>
+              <p class="play-desc">Digital laboratory manual and experiment tracking portal for engineering departments.</p>
+            </div>
+            <div class="play-card-footer">
+              <span>Markdown / Web</span>
+              <span class="play-view-link">View details →</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 06: ABOUT ARYAN (Personal Visual Introduction)
+         ========================================================= -->
+    <section id="about" class="about-aryan-section">
+      <!-- Atmospheric Background Layer -->
+      <div class="about-atmosphere" aria-hidden="true">
+        <div class="about-ambient-glow"></div>
+        <div class="about-secondary-glow"></div>
+        <svg class="about-decor-svg" viewBox="0 0 1440 600" fill="none" preserveAspectRatio="none">
+          <!-- Subtle editorial compass crosshairs & line art -->
+          <circle cx="120" cy="180" r="40" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" class="about-decor-circle" />
+          <line x1="120" y1="120" x2="120" y2="240" stroke="currentColor" stroke-width="1" class="about-decor-line" />
+          <line x1="60" y1="180" x2="180" y2="180" stroke="currentColor" stroke-width="1" class="about-decor-line" />
+          <circle cx="120" cy="180" r="2.5" class="about-decor-dot" />
+
+          <path class="about-sparkle" d="M 1320,120 Q 1320,128 1328,128 Q 1320,128 1320,136 Q 1320,128 1312,128 Q 1320,128 1320,120 Z" />
+          <path class="about-sparkle sparkle-delay" d="M 980,480 Q 980,486 986,486 Q 980,486 980,492 Q 980,486 974,486 Q 980,486 980,480 Z" />
+        </svg>
+      </div>
+
+      <div class="about-container">
+        <div class="about-portrait-wrapper reveal-on-scroll">
+          <div class="about-avatar-frame">
+            <img src="/assets/aryan-avatar.jpg" alt="Aryan Kumar portrait" class="about-avatar-img" loading="lazy">
+            <div class="about-avatar-overlay"></div>
+          </div>
+          <div class="avatar-sticky-note note-top-left">BUILD 🔨</div>
+          <div class="avatar-sticky-note note-bottom-right">SHIP 🚀</div>
+          <div class="avatar-sticky-note note-bottom-left">LEARN 📚</div>
+
+          <div class="about-location-badge">
+            <span class="about-status-pulse"></span>
+            <span>NIT Agartala • Bachelors</span>
+          </div>
+        </div>
+
+        <div class="about-narrative-col reveal-on-scroll delay-1">
+          <div class="about-badge-small">
+            <span class="about-badge-dot">●</span>
+            <span>04 — ABOUT ME</span>
+          </div>
+
+          <h2 class="about-greeting-title">Hi, I'm <span class="about-name-highlight">Aryan.</span></h2>
+          
+          <p class="about-bio-body">
+            I'm a developer and product builder currently pursuing bachelors at <strong>NIT Agartala</strong>. I love taking complex, disorganized problems in the real world — like state counselling cutoffs, student academic ecosystems, or personal decision dilemmas — and building calm, reliable digital products that people can actually use.
+          </p>
+          <p class="about-bio-body">
+            My work combines product intuition with full-stack engineering across modern mobile and web ecosystems.
+          </p>
+
+          <!-- Core Highlights / Pillars Strip -->
+          <div class="about-highlights-grid">
+            <div class="about-highlight-card">
+              <div class="highlight-icon">🎯</div>
+              <div class="highlight-info">
+                <span class="highlight-title">Philosophy</span>
+                <span class="highlight-desc">Zero Fluff & High Utility</span>
+              </div>
+            </div>
+            <div class="about-highlight-card">
+              <div class="highlight-icon">⚡</div>
+              <div class="highlight-info">
+                <span class="highlight-title">Core Stack</span>
+                <span class="highlight-desc">Next.js • Flutter • Supabase</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tags-row">
+            <span class="about-meta-chip"><span class="chip-dot"></span>NIT Agartala</span>
+            <span class="about-meta-chip"><span class="chip-dot"></span>Product Builder</span>
+            <span class="about-meta-chip"><span class="chip-dot"></span>Mobile & Web</span>
+            <span class="about-meta-chip"><span class="chip-dot"></span>Counselling Intelligence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 07: PHILOSOPHY (Immersive Meadow Scene & Visual Pause)
+         ========================================================= -->
+    <section id="philosophy" class="philosophy-scene-section">
+      <!-- Atmospheric Impasto Oil Painting Background Layer (Day & Night) -->
+      <div class="philosophy-impasto-layer" aria-hidden="true">
+        <!-- Day Mode: Symmetrical Green Weeping Willow Impasto Oil Artwork -->
+        <img src="/assets/philosophy-day-impasto.jpg" alt="" class="philosophy-bg-image philosophy-bg-image-day" loading="lazy">
+        <!-- Night Mode: Deep Midnight Purple / Mauve Starry Sky Impasto Artwork -->
+        <img src="/assets/philosophy-impasto-bg.jpg" alt="" class="philosophy-bg-image philosophy-bg-image-night" loading="lazy">
+        <div class="philosophy-bg-overlay"></div>
+        <div class="philosophy-starfield-overlay">
+          <!-- Subtle Distant Stars (Active in Night Mode) -->
+          <div class="phil-star star-1"></div>
+          <div class="phil-star star-2"></div>
+          <div class="phil-star star-3"></div>
+          <div class="phil-star star-4"></div>
+          <div class="phil-star star-5"></div>
+          <div class="phil-star star-6"></div>
+          <!-- Distant Falling Star -->
+          <div class="phil-shooting-star"></div>
+        </div>
+      </div>
+
+      <div class="philosophy-content-box">
+        <div class="philosophy-tag-small reveal-on-scroll">
+          <span class="manifesto-dot">●</span>
+          <span>BUILDER MANIFESTO</span>
+        </div>
+
+        <h2 class="philosophy-quote-statement reveal-on-scroll">
+          Good products start<br>
+          with <span class="serif-italics">better questions.</span>
+        </h2>
+
+        <p class="philosophy-sub-text reveal-on-scroll delay-1">
+          I don't believe in unnecessary complexity. Every feature should remove friction, clarify uncertainty, and deliver immediate utility to the person using it.
+        </p>
+
+        <!-- Bottom Category Tags Row Matching Reference Image -->
+        <div class="philosophy-category-tags reveal-on-scroll delay-2">
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>PRODUCT ARCHITECTURE</span>
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>CODE</span>
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>EXPERIMENTAL UI</span>
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>STUDENT ECOSYSTEMS</span>
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>CONVERSATIONAL AI</span>
+          <span class="phil-tag-item"><span class="phil-tag-dot"></span>STATE ADMISSIONS</span>
+        </div>
+      </div>
+
+      <!-- Seamless Curve Transition to Next Section -->
+      <svg class="philosophy-bottom-curve" viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C360,90 720,10 1080,60 C1260,85 1380,45 1440,50 L1440,100 L0,100 Z" />
+      </svg>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       SECTION 08 & 09: FINALE - "LET'S GROW YOUR NEXT IDEA" MEADOW
+       Reference-accurate Botanical Illustration & Editorial Footer
+       ========================================================= -->
+  <footer id="contact" class="grow-footer-section">
+      <!-- Atmospheric Stardust Layer -->
+      <div class="footer-sky-atmosphere" aria-hidden="true">
+        <div class="footer-stardust"></div>
+      </div>
+
+
+      <!-- Main Headline Content -->
+      <div class="grow-footer-content">
+        <p class="grow-subtitle reveal-on-scroll">
+          From early concepts to refined experiences, I help ambitious teams build products that earn trust, move quickly, and drive growth.
+        </p>
+
+        <h2 class="grow-main-title reveal-on-scroll delay-1">
+          Let’s grow your next idea
+        </h2>
+
+        <!-- Social & Contact Links Row Set Directly Below Title -->
+        <div class="grow-social-pills-row reveal-on-scroll delay-2">
+          <a href="https://www.linkedin.com/in/aryan-kumar-8341b5387" target="_blank" rel="noopener noreferrer" class="grow-social-pill">
+            <span>LinkedIn</span>
+            <span class="pill-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/Aryankashyapnit" target="_blank" rel="noopener noreferrer" class="grow-social-pill">
+            <span>GitHub</span>
+            <span class="pill-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="/assets/aryaresume.pdf" target="_blank" rel="noopener noreferrer" class="grow-social-pill">
+            <span>Resume</span>
+            <span class="pill-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a href="mailto:nitaryan136@gmail.com" class="grow-social-pill grow-email-pill">
+            <span>Email Me</span>
+            <span class="pill-arrow" aria-hidden="true">✉</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hand-Drawn Blooming Botanical Meadow Landscape (Handcrafted Editorial Art Direction) -->
+      <div id="growMeadow" class="grow-meadow-container" aria-hidden="true">
+        <svg class="grow-meadow-svg" viewBox="0 0 1440 390" fill="none" preserveAspectRatio="none">
+          <defs>
+            <!-- Organic Hand-Drawn Daisy Variant A (Large Tall Center Daisy, 9 Irregular Petals, warm orange core) -->
+            <g id="daisyHandA">
+              <!-- Irregular hand-sculpted petals with varied lengths & angles -->
+              <path d="M-2,-7 C-4,-18 3,-23 7,-19 C10,-16 7,-9 3,-6 Z" fill="#ffffff"/>
+              <path d="M3,-6 C9,-17 18,-18 20,-12 C21,-7 14,-2 6,-2 Z" fill="#fdfdfd"/>
+              <path d="M6,-1 C17,-6 24,-1 23,6 C22,11 14,9 6,4 Z" fill="#ffffff"/>
+              <path d="M5,4 C14,10 18,19 14,24 C10,27 4,18 1,7 Z" fill="#fcfcfc"/>
+              <path d="M0,7 C4,18 -3,25 -9,22 C-13,19 -7,12 -2,6 Z" fill="#ffffff"/>
+              <path d="M-3,5 C-12,15 -21,17 -23,10 C-24,5 -15,0 -6,1 Z" fill="#fdfdfd"/>
+              <path d="M-6,0 C-18,2 -25,-6 -22,-12 C-20,-17 -11,-10 -4,-4 Z" fill="#ffffff"/>
+              <path d="M-4,-4 C-14,-14 -16,-23 -10,-25 C-5,-27 0,-16 0,-7 Z" fill="#fefefe"/>
+              <path d="M-1,-7 C4,-20 12,-21 13,-15 C13,-10 6,-5 2,-4 Z" fill="#ffffff"/>
+              <!-- Warm organic orange/golden center with sketch contour -->
+              <path d="M-8,-2 C-8,-7 -4,-10 1,-10 C7,-10 10,-6 10,-1 C10,5 6,9 0,9 C-6,9 -8,4 -8,-2 Z" fill="#f59e0b" stroke="#b45309" stroke-width="1.8"/>
+              <circle cx="2" cy="-2" r="1.8" fill="#d97706"/>
+              <circle cx="-3" cy="2" r="1.5" fill="#d97706"/>
+            </g>
+
+            <!-- Organic Daisy Variant B (Medium Left-Tilted Daisy, 8 Asymmetrical Petals) -->
+            <g id="daisyHandB">
+              <path d="M-1,-5 C-2,-15 4,-19 7,-15 C9,-12 6,-6 2,-4 Z" fill="#ffffff"/>
+              <path d="M3,-4 C10,-14 17,-12 18,-7 C18,-2 11,0 4,-1 Z" fill="#fefefe"/>
+              <path d="M5,0 C15,-3 20,4 18,9 C16,13 9,9 4,3 Z" fill="#ffffff"/>
+              <path d="M3,4 C10,12 12,19 7,21 C3,22 -1,14 -1,6 Z" fill="#fdfdfd"/>
+              <path d="M-2,5 C-1,16 -8,20 -12,17 C-15,13 -9,7 -3,3 Z" fill="#ffffff"/>
+              <path d="M-4,2 C-14,9 -19,6 -20,0 C-20,-4 -12,-1 -5,-1 Z" fill="#fefefe"/>
+              <path d="M-4,-2 C-15,-7 -18,-15 -13,-18 C-9,-20 -4,-11 -2,-5 Z" fill="#ffffff"/>
+              <path d="M-1,-5 C3,-17 10,-16 11,-11 C11,-7 5,-3 1,-3 Z" fill="#ffffff"/>
+              <path d="M-7,-1 C-7,-5 -3,-8 1,-8 C6,-8 8,-4 8,0 C8,4 4,7 -1,7 C-5,7 -7,3 -7,-1 Z" fill="#f59e0b" stroke="#b45309" stroke-width="1.6"/>
+              <circle cx="1" cy="-1" r="1.4" fill="#d97706"/>
+            </g>
+
+            <!-- Organic Daisy Variant C (Small/Baby Low Daisy, 7 Petals, Delicate) -->
+            <g id="daisyHandC">
+              <path d="M0,-3 C1,-10 6,-11 7,-8 C8,-5 4,-2 1,-2 Z" fill="#ffffff"/>
+              <path d="M2,-1 C8,-5 12,0 11,4 C9,7 4,4 1,1 Z" fill="#fdfdfd"/>
+              <path d="M2,2 C6,8 6,12 2,13 C-1,14 -2,8 -1,3 Z" fill="#ffffff"/>
+              <path d="M-1,3 C-2,10 -8,11 -10,8 C-11,5 -6,2 -2,1 Z" fill="#ffffff"/>
+              <path d="M-2,0 C-9,2 -12,-3 -10,-6 C-8,-9 -3,-4 -1,-2 Z" fill="#fefefe"/>
+              <path d="M-1,-2 C-6,-8 -4,-12 0,-12 C3,-12 3,-6 0,-3 Z" fill="#ffffff"/>
+              <path d="M-4,0 C-4,-3 -1,-5 1,-5 C4,-5 5,-2 5,1 C5,3 2,5 -1,5 C-3,5 -4,2 -4,0 Z" fill="#f59e0b" stroke="#b45309" stroke-width="1.2"/>
+            </g>
+
+            <!-- Organic Daisy Variant D (Side-Angled Drooping Daisy, 8 Foreshortened Petals) -->
+            <g id="daisyHandD">
+              <path d="M-2,-4 C-3,-13 2,-16 6,-13 C9,-10 6,-5 2,-3 Z" fill="#ffffff"/>
+              <path d="M3,-3 C12,-8 17,-5 16,1 C15,5 9,4 3,0 Z" fill="#fdfdfd"/>
+              <path d="M3,2 C10,7 12,14 8,17 C4,19 0,12 0,5 Z" fill="#ffffff"/>
+              <path d="M-1,4 C-2,13 -9,16 -13,13 C-15,10 -9,5 -3,2 Z" fill="#ffffff"/>
+              <path d="M-3,1 C-12,4 -17,-1 -16,-6 C-15,-9 -8,-4 -3,-2 Z" fill="#fefefe"/>
+              <path d="M-2,-3 C-10,-9 -11,-16 -7,-17 C-3,-18 0,-10 0,-4 Z" fill="#ffffff"/>
+              <path d="M-6,-1 C-6,-4 -2,-6 1,-6 C5,-6 7,-3 7,0 C7,3 4,6 0,6 C-4,6 -6,2 -6,-1 Z" fill="#f59e0b" stroke="#b45309" stroke-width="1.5"/>
+            </g>
+          </defs>
+
+          <!-- =========================================================
+               BACKGROUND GROUND & TEAL WAVY WATER/ATMOSPHERE STRIP
+               ========================================================= -->
+          <!-- Deep Teal Horizon Wave behind soil -->
+          <path d="M0,220 C220,190 460,238 720,205 C980,172 1220,225 1440,195 L1440,390 L0,390 Z" fill="#006b74" opacity="0.95"/>
+          <path d="M0,234 C280,208 520,248 780,218 C1040,188 1280,238 1440,208 L1440,390 L0,390 Z" fill="#00555d" opacity="0.6"/>
+
+          <!-- Front Rolling Purple Earth / Soil Landscape Layer -->
+          <path d="M0,244 C160,220 380,265 620,238 C860,212 1120,256 1440,226 L1440,390 L0,390 Z" fill="#3c3358"/>
+
+          <!-- Deep Rich Purple Soil Base -->
+          <path d="M0,268 C200,246 460,282 740,255 C1020,228 1260,274 1440,246 L1440,390 L0,390 Z" fill="#282040" opacity="0.92"/>
+
+          <!-- Organic Hand-Drawn Black Sketch Lines on Soil -->
+          <path d="M20,258 Q 200,240 430,270" stroke="#120c24" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <path d="M470,266 Q 710,244 950,276" stroke="#120c24" stroke-width="3.5" stroke-linecap="round" opacity="0.85"/>
+          <path d="M1000,260 Q 1230,240 1420,266" stroke="#120c24" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+          <path d="M50,300 Q 330,280 670,316" stroke="#120c24" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+          <path d="M710,306 Q 990,284 1360,322" stroke="#120c24" stroke-width="4.2" stroke-linecap="round" opacity="0.9"/>
+          <path d="M160,340 Q 400,326 680,350" stroke="#120c24" stroke-width="2.8" stroke-linecap="round" opacity="0.7"/>
+          <path d="M840,346 Q 1090,332 1380,356" stroke="#120c24" stroke-width="2.8" stroke-linecap="round" opacity="0.7"/>
+
+          <!-- =========================================================
+               LAYER 1: BACKGROUND VEGETATION & DISTANT GRASS BLADES
+               (Spreads continuously across the landscape for rich depth)
+               ========================================================= -->
+          <g class="bg-vegetation-layer" opacity="0.85">
+            <!-- Left Background Grass -->
+            <path d="M20,248 Q 12,215 8,198 Q 18,222 25,248" fill="#183620"/>
+            <path d="M42,248 Q 50,210 58,190 Q 52,222 46,248" fill="#244d2d"/>
+            <path d="M150,252 Q 162,218 170,196 Q 158,225 152,252" fill="#183620"/>
+            <path d="M180,252 Q 172,220 166,202 Q 178,226 184,252" fill="#2a5734"/>
+
+            <!-- Mid-Left Background Grass -->
+            <path d="M260,250 Q 252,212 245,190 Q 258,220 264,250" fill="#183620"/>
+            <path d="M430,242 Q 418,206 410,185 Q 426,215 435,242" fill="#244d2d"/>
+            <path d="M448,242 Q 456,200 460,178 Q 458,212 452,242" fill="#32633d"/>
+            <path d="M465,242 Q 480,208 490,188 Q 476,218 468,242" fill="#183620"/>
+
+            <!-- Center-Left Background Grass -->
+            <path d="M580,238 Q 568,202 558,180 Q 575,210 585,238" fill="#244d2d"/>
+            <path d="M635,236 Q 645,195 650,172 Q 644,208 638,236" fill="#183620"/>
+
+            <!-- Center-Right Background Grass -->
+            <path d="M840,235 Q 852,196 860,175 Q 848,208 842,235" fill="#244d2d"/>
+            <path d="M890,238 Q 878,200 870,178 Q 886,210 895,238" fill="#183620"/>
+            <path d="M910,240 Q 922,204 930,182 Q 918,214 912,240" fill="#32633d"/>
+
+            <!-- Right Background Grass -->
+            <path d="M1170,242 Q 1158,205 1150,185 Q 1166,215 1175,242" fill="#183620"/>
+            <path d="M1210,240 Q 1222,202 1230,180 Q 1218,212 1212,240" fill="#244d2d"/>
+            <path d="M1390,235 Q 1402,198 1410,178 Q 1398,210 1392,235" fill="#183620"/>
+            <path d="M1420,232 Q 1410,195 1402,175 Q 1416,206 1424,232" fill="#2a5734"/>
+          </g>
+
+          <!-- =========================================================
+               FLOWER CLUSTER 1: FAR LEFT
+               (Short Hand-Drawn Daisy + Tilted Lavender + Tall Slender Daisy)
+               ========================================================= -->
+          <g class="flower-growth-root" data-cluster="1" data-growth="1.0">
+            <g class="flower-group flower-group-1">
+              <!-- Multi-bladed organic grass bush at root base -->
+              <g class="group-grass-clump">
+                <path d="M96,264 Q 60,232 38,210 Q 66,236 96,264" fill="#1a3820"/>
+                <path d="M98,264 Q 72,212 60,182 Q 82,220 98,264" fill="#27542f"/>
+                <path d="M100,264 Q 88,198 82,165 Q 95,212 100,264" fill="#387042"/>
+                <path d="M102,264 Q 106,186 104,152 Q 114,206 102,264" fill="#4c8f58"/>
+                <path d="M104,264 Q 118,196 126,168 Q 116,214 104,264" fill="#387042"/>
+                <path d="M106,264 Q 134,212 148,186 Q 128,228 106,264" fill="#27542f"/>
+                <path d="M108,264 Q 152,232 172,212 Q 140,240 108,264" fill="#1a3820"/>
+              </g>
+
+              <!-- 1. Left Short Daisy (Curving slightly left, leaning 5deg) -->
+              <path d="M74,264 Q 62,216 68,172" stroke="#8c533e" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <path d="M70,218 Q 54,210 46,196 Q 58,206 70,218" fill="#27542f"/>
+              <g transform="translate(68, 172) rotate(-8)">
+                <use href="#daisyHandB" transform="scale(0.85)"/>
+              </g>
+
+              <!-- 2. Lavender Purple Spike (Middle) -->
+              <path d="M88,264 Q 82,198 86,142" stroke="#8c533e" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <path d="M85,208 Q 72,200 66,188 Q 78,196 85,208" fill="#27542f"/>
+              <g transform="translate(86, 142) rotate(-3)">
+                <ellipse cx="-2.5" cy="0" rx="3.5" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="2.5" cy="0" rx="3.5" ry="5.5" fill="#7c3aed"/>
+                <ellipse cx="-3" cy="9" rx="4" ry="6" fill="#7c3aed"/>
+                <ellipse cx="3" cy="9" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="-3" cy="18" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="3" cy="18" rx="4" ry="6" fill="#6d28d9"/>
+                <ellipse cx="-2.5" cy="27" rx="3.5" ry="5" fill="#7c3aed"/>
+                <ellipse cx="2.5" cy="27" rx="3.5" ry="5" fill="#8b5cf6"/>
+                <ellipse cx="0" cy="-7" rx="3" ry="5" fill="#a78bfa"/>
+              </g>
+
+              <!-- 3. Tall Daisy on Right (Reaching y=102, leaning gently right) -->
+              <path d="M112,264 Q 120,172 114,102" stroke="#8c533e" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M114,180 Q 130,170 138,154 Q 125,168 114,180" fill="#27542f"/>
+              <g transform="translate(114, 102) rotate(6)">
+                <use href="#daisyHandA" transform="scale(0.92)"/>
+              </g>
+
+              <!-- Water Bloom Sparkles -->
+              <g class="flower-water-sparkles">
+                <polygon points="114,76 116,82 122,84 116,86 114,92 112,86 106,84 112,82" fill="#fde047"/>
+                <circle cx="86" cy="115" r="2.2" fill="#67e8f9"/>
+                <polygon points="68,146 70,150 74,151 70,152 68,156 66,152 62,151 66,150" fill="#a78bfa"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- =========================================================
+               FLOWER CLUSTER 2: MID-LEFT
+               (Tiny Baby Daisy low down + Medium Daisy + Lavender)
+               ========================================================= -->
+          <g class="flower-growth-root" data-cluster="2" data-growth="1.0">
+            <g class="flower-group flower-group-2">
+              <!-- Spiky Grass Clump at Base -->
+              <g class="group-grass-clump">
+                <path d="M346,264 Q 314,232 298,212 Q 322,234 346,264" fill="#1a3820"/>
+                <path d="M348,264 Q 330,214 322,186 Q 340,224 348,264" fill="#27542f"/>
+                <path d="M352,264 Q 346,192 344,165 Q 354,214 352,264" fill="#387042"/>
+                <path d="M354,264 Q 368,195 376,170 Q 366,216 354,264" fill="#4c8f58"/>
+                <path d="M356,264 Q 384,216 398,195 Q 378,228 356,264" fill="#27542f"/>
+                <path d="M358,264 Q 400,234 418,218 Q 388,238 358,264" fill="#1a3820"/>
+              </g>
+
+              <!-- 1. Tiny Baby Daisy Growing Low on Left -->
+              <path d="M316,264 Q 324,228 316,196" stroke="#8c533e" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <g transform="translate(316, 196) rotate(-12)">
+                <use href="#daisyHandC"/>
+              </g>
+
+              <!-- 2. Medium-Tall Daisy in Center (Natural S-Curve stem) -->
+              <path d="M350,264 Q 342,176 356,118" stroke="#8c533e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+              <path d="M348,192 Q 330,182 322,168 Q 336,178 348,192" fill="#27542f"/>
+              <g transform="translate(356, 118) rotate(4)">
+                <use href="#daisyHandB" transform="scale(1.05)"/>
+              </g>
+
+              <!-- 3. Lavender Spike on Right -->
+              <path d="M380,264 Q 388,202 384,148" stroke="#8c533e" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <g transform="translate(384, 148) rotate(7)">
+                <ellipse cx="-2.5" cy="0" rx="3.5" ry="5" fill="#8b5cf6"/>
+                <ellipse cx="2.5" cy="0" rx="3.5" ry="5" fill="#7c3aed"/>
+                <ellipse cx="-3" cy="8" rx="3.8" ry="5.5" fill="#7c3aed"/>
+                <ellipse cx="3" cy="8" rx="3.8" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="-3" cy="16" rx="3.8" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="3" cy="16" rx="3.8" ry="5.5" fill="#6d28d9"/>
+                <ellipse cx="0" cy="-6" rx="2.8" ry="4.5" fill="#a78bfa"/>
+              </g>
+
+              <!-- Water Bloom Sparkles -->
+              <g class="flower-water-sparkles">
+                <polygon points="356,92 358,98 364,100 358,102 356,108 354,102 348,100 354,98" fill="#fde047"/>
+                <circle cx="384" cy="120" r="2.4" fill="#38bdf8"/>
+                <circle cx="316" cy="170" r="1.8" fill="#f472b6"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- =========================================================
+               FLOWER CLUSTER 3: CENTER HERO CLUSTER
+               (Tiny Bud + Grand Majestic Center Daisy + Tall Lavender + Dense Radiating Bush)
+               ========================================================= -->
+          <g class="flower-growth-root" data-cluster="3" data-growth="1.0">
+            <g class="flower-group flower-group-3">
+              <!-- Massive Lush Radiating Grass Bush Clump (Dense Fan Shape) -->
+              <g class="group-grass-clump">
+                <path d="M720,250 Q 645,212 605,190 Q 655,222 720,250" fill="#183620"/>
+                <path d="M722,250 Q 668,192 638,158 Q 678,206 722,250" fill="#244d2b"/>
+                <path d="M724,250 Q 690,175 675,138 Q 704,196 724,250" fill="#2d5c34"/>
+                <path d="M728,250 Q 712,158 706,120 Q 722,186 728,250" fill="#386e3f"/>
+                <path d="M730,250 Q 736,148 732,110 Q 744,180 730,250" fill="#4c8f58"/>
+                <path d="M732,250 Q 755,158 762,120 Q 750,186 732,250" fill="#386e3f"/>
+                <path d="M736,250 Q 775,175 790,138 Q 762,196 736,250" fill="#2d5c34"/>
+                <path d="M738,250 Q 800,192 825,158 Q 785,206 738,250" fill="#244d2b"/>
+                <path d="M740,250 Q 818,212 855,190 Q 805,222 740,250" fill="#183620"/>
+              </g>
+
+              <!-- 1. Small White Daisy Low on Left -->
+              <path d="M680,250 Q 674,214 682,185" stroke="#8c533e" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <g transform="translate(682, 185) rotate(-6)">
+                <use href="#daisyHandC" transform="scale(0.95)"/>
+              </g>
+
+              <!-- 2. Grand Majestic Center Daisy (Tallest, Wavy Stem, reaches y=72) -->
+              <path d="M730,250 Q 720,136 735,72" stroke="#8c533e" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+              <path d="M724,166 Q 700,154 690,138 Q 708,150 724,166" fill="#2d5c34"/>
+              <path d="M732,126 Q 756,116 768,100 Q 750,116 732,126" fill="#2d5c34"/>
+              <g transform="translate(735, 72) rotate(2)">
+                <use href="#daisyHandA" transform="scale(1.15)"/>
+              </g>
+
+              <!-- 3. Lavender Purple Spike on Right -->
+              <path d="M766,250 Q 774,178 770,124" stroke="#8c533e" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+              <g transform="translate(770, 124) rotate(5)">
+                <ellipse cx="-2.5" cy="0" rx="3.5" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="2.5" cy="0" rx="3.5" ry="5.5" fill="#7c3aed"/>
+                <ellipse cx="-3" cy="9" rx="4" ry="6" fill="#7c3aed"/>
+                <ellipse cx="3" cy="9" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="-3" cy="18" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="3" cy="18" rx="4" ry="6" fill="#6d28d9"/>
+                <ellipse cx="-2.5" cy="27" rx="3.5" ry="5" fill="#7c3aed"/>
+                <ellipse cx="2.5" cy="27" rx="3.5" ry="5" fill="#8b5cf6"/>
+                <ellipse cx="0" cy="-7" rx="3" ry="5" fill="#a78bfa"/>
+              </g>
+
+              <!-- Water Bloom Sparkles -->
+              <g class="flower-water-sparkles">
+                <polygon points="735,42 738,50 746,53 738,56 735,64 732,56 724,53 732,50" fill="#fde047"/>
+                <polygon points="770,95 772,99 776,100 772,101 770,105 768,101 764,100 768,99" fill="#a78bfa"/>
+                <circle cx="682" cy="155" r="2.2" fill="#67e8f9"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- =========================================================
+               FLOWER CLUSTER 4: MID-RIGHT
+               (Medium Daisy + Lavender Spike + Tiny Daisy)
+               ========================================================= -->
+          <g class="flower-growth-root" data-cluster="4" data-growth="1.0">
+            <g class="flower-group flower-group-4">
+              <!-- Spiky Grass Clump at Base -->
+              <g class="group-grass-clump">
+                <path d="M1060,248 Q 1026,216 1008,195 Q 1034,220 1060,248" fill="#1a3820"/>
+                <path d="M1062,248 Q 1042,198 1034,172 Q 1054,208 1062,248" fill="#27522d"/>
+                <path d="M1065,248 Q 1060,180 1058,154 Q 1068,202 1065,248" fill="#386e3f"/>
+                <path d="M1068,248 Q 1084,184 1092,160 Q 1082,204 1068,248" fill="#4c8f58"/>
+                <path d="M1070,248 Q 1100,204 1114,184 Q 1094,218 1070,248" fill="#27522d"/>
+                <path d="M1072,248 Q 1114,218 1134,200 Q 1104,226 1072,248" fill="#1a3820"/>
+              </g>
+
+              <!-- 1. Medium Hand-Drawn Daisy (Tilted slightly left) -->
+              <path d="M1062,248 Q 1054,162 1066,106" stroke="#8c533e" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M1060,176 Q 1038,166 1030,150 Q 1046,162 1060,176" fill="#27522d"/>
+              <g transform="translate(1066, 106) rotate(-5)">
+                <use href="#daisyHandD" transform="scale(1.08)"/>
+              </g>
+
+              <!-- 2. Lavender Purple Spike -->
+              <path d="M1094,248 Q 1102,188 1098,136" stroke="#8c533e" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <g transform="translate(1098, 136) rotate(3)">
+                <ellipse cx="-2.5" cy="0" rx="3.5" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="2.5" cy="0" rx="3.5" ry="5.5" fill="#7c3aed"/>
+                <ellipse cx="-3" cy="9" rx="4" ry="6" fill="#7c3aed"/>
+                <ellipse cx="3" cy="9" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="-3" cy="18" rx="4" ry="6" fill="#8b5cf6"/>
+                <ellipse cx="3" cy="18" rx="4" ry="6" fill="#6d28d9"/>
+                <ellipse cx="0" cy="-7" rx="3" ry="5" fill="#a78bfa"/>
+              </g>
+
+              <!-- 3. Tiny Daisy Beside -->
+              <path d="M1126,248 Q 1134,214 1128,182" stroke="#8c533e" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+              <g transform="translate(1128, 182) rotate(10)">
+                <use href="#daisyHandC" transform="scale(0.9)"/>
+              </g>
+
+              <!-- Water Bloom Sparkles -->
+              <g class="flower-water-sparkles">
+                <polygon points="1066,78 1068,84 1074,86 1068,88 1066,94 1064,88 1058,86 1064,84" fill="#fde047"/>
+                <circle cx="1098" cy="110" r="2.2" fill="#a78bfa"/>
+                <circle cx="1128" cy="155" r="1.8" fill="#38bdf8"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- =========================================================
+               FLOWER CLUSTER 5: FAR-RIGHT
+               (Lavender + Pair of Daisies: Medium & Tall Angled + Baby Bud)
+               ========================================================= -->
+          <g class="flower-growth-root" data-cluster="5" data-growth="1.0">
+            <g class="flower-group flower-group-5">
+              <!-- Dense Spiky Grass Clump at Base -->
+              <g class="group-grass-clump">
+                <path d="M1294,245 Q 1255,212 1234,190 Q 1264,215 1294,245" fill="#1a3820"/>
+                <path d="M1296,245 Q 1274,195 1264,168 Q 1284,205 1296,245" fill="#27522d"/>
+                <path d="M1300,245 Q 1300,180 1296,152 Q 1306,198 1300,245" fill="#386e3f"/>
+                <path d="M1302,245 Q 1322,184 1334,160 Q 1320,205 1302,245" fill="#4c8f58"/>
+                <path d="M1306,245 Q 1338,206 1354,185 Q 1332,218 1306,245" fill="#27522d"/>
+                <path d="M1308,245 Q 1354,218 1376,200 Q 1342,226 1308,245" fill="#1a3820"/>
+              </g>
+
+              <!-- 1. Lavender Spike on Left of Cluster -->
+              <path d="M1268,245 Q 1262,188 1266,142" stroke="#8c533e" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <g transform="translate(1266, 142) rotate(-4)">
+                <ellipse cx="-2.5" cy="0" rx="3.5" ry="5" fill="#8b5cf6"/>
+                <ellipse cx="2.5" cy="0" rx="3.5" ry="5" fill="#7c3aed"/>
+                <ellipse cx="-3" cy="8" rx="3.8" ry="5.5" fill="#7c3aed"/>
+                <ellipse cx="3" cy="8" rx="3.8" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="-3" cy="16" rx="3.8" ry="5.5" fill="#8b5cf6"/>
+                <ellipse cx="3" cy="16" rx="3.8" ry="5.5" fill="#6d28d9"/>
+                <ellipse cx="0" cy="-6" rx="2.8" ry="4.5" fill="#a78bfa"/>
+              </g>
+
+              <!-- 2. Medium Daisy (Left) -->
+              <path d="M1290,245 Q 1282,160 1288,112" stroke="#8c533e" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+              <g transform="translate(1288, 112) rotate(-6)">
+                <use href="#daisyHandB" transform="scale(1.02)"/>
+              </g>
+
+              <!-- 3. Tall Angled Daisy (Right, leaning 8deg right) -->
+              <path d="M1316,245 Q 1332,152 1344,92" stroke="#8c533e" stroke-width="3.1" stroke-linecap="round" fill="none"/>
+              <path d="M1320,172 Q 1342,162 1352,146 Q 1336,162 1320,172" fill="#27522d"/>
+              <g transform="translate(1344, 92) rotate(8)">
+                <use href="#daisyHandA" transform="scale(1.06)"/>
+              </g>
+
+              <!-- 4. Baby Daisy beside -->
+              <path d="M1358,245 Q 1366,212 1360,182" stroke="#8c533e" stroke-width="2" stroke-linecap="round" fill="none"/>
+              <g transform="translate(1360, 182) rotate(12)">
+                <use href="#daisyHandC" transform="scale(0.85)"/>
+              </g>
+
+              <!-- Water Bloom Sparkles -->
+              <g class="flower-water-sparkles">
+                <polygon points="1344,66 1346,72 1352,74 1346,76 1344,82 1342,76 1336,74 1342,72" fill="#fde047"/>
+                <polygon points="1288,86 1290,90 1294,91 1290,92 1288,96 1286,92 1282,91 1286,90" fill="#fde047"/>
+                <circle cx="1266" cy="118" r="2.2" fill="#a78bfa"/>
+              </g>
+            </g>
+          </g>
+
+          <!-- =========================================================
+               LAYER 3: FOREGROUND OVERLAPPING GRASS & SOIL TUFTS
+               (Emerges directly from purple ground to cover stem bottoms)
+               ========================================================= -->
+          <g class="fg-grass-layer">
+            <!-- Left foreground tufts -->
+            <path d="M60,268 Q 72,246 80,232 Q 74,256 64,272" fill="#244d2b"/>
+            <path d="M108,266 Q 118,240 125,224 Q 116,252 108,268" fill="#387042"/>
+            <path d="M130,265 Q 142,244 150,230 Q 138,254 128,268" fill="#183620"/>
+
+            <!-- Mid-left foreground tufts -->
+            <path d="M305,266 Q 318,242 328,228 Q 316,254 304,268" fill="#27542f"/>
+            <path d="M362,266 Q 374,238 382,222 Q 372,252 360,268" fill="#387042"/>
+
+            <!-- Center foreground tufts -->
+            <path d="M690,254 Q 704,228 714,212 Q 702,242 690,258" fill="#244d2b"/>
+            <path d="M745,254 Q 760,224 772,206 Q 755,240 742,258" fill="#387042"/>
+            <path d="M780,252 Q 795,230 806,216 Q 790,244 778,256" fill="#183620"/>
+
+            <!-- Mid-right foreground tufts -->
+            <path d="M1045,250 Q 1058,226 1068,210 Q 1055,238 1044,254" fill="#27542f"/>
+            <path d="M1080,250 Q 1095,222 1105,205 Q 1092,238 1080,254" fill="#387042"/>
+
+            <!-- Far-right foreground tufts -->
+            <path d="M1280,248 Q 1294,224 1305,208 Q 1292,238 1280,252" fill="#244d2b"/>
+            <path d="M1325,248 Q 1340,220 1352,202 Q 1335,236 1322,252" fill="#387042"/>
+            <path d="M1370,246 Q 1384,226 1392,212 Q 1380,238 1368,250" fill="#183620"/>
+          </g>
+        </svg>
+
+        <!-- 3D Suit Animated Character Walking & Watering across Meadow -->
+        <div id="gardenerCharacterWrapper" class="gardener-character-wrapper">
+          <div id="gardenerCharacterNode" class="gardener-character-node is-walking" role="button" aria-label="Animated Aryan watering flowers">
+            <div class="gardener-3d-shadow"></div>
+            <div class="gardener-img-box">
+              <img id="gardenerImgWalk" class="gardener-3d-img gardener-img-walk" src="/assets/aryan-gardener-walk.jpg" alt="Aryan walking with watering can" />
+              <img id="gardenerImgWater" class="gardener-3d-img gardener-img-water" src="/assets/aryan-gardener-water.jpg" alt="Aryan watering plants" />
+              <!-- Live Animated Water Stream & Splash Drops -->
+              <div class="gardener-water-stream-overlay">
+                <svg class="water-stream-svg" viewBox="0 0 90 110" fill="none">
+                  <path class="water-spray-arc" d="M10,15 Q50,35 75,95" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" fill="none"/>
+                  <path class="water-spray-arc" d="M12,18 Q45,40 68,96" stroke="#bae6fd" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  <circle cx="35" cy="38" r="2.2" fill="#7dd3fc" class="water-drop-p" style="animation-delay: 0.1s;"/>
+                  <circle cx="50" cy="58" r="2.6" fill="#38bdf8" class="water-drop-p" style="animation-delay: 0.25s;"/>
+                  <circle cx="65" cy="78" r="2" fill="#e0f2fe" class="water-drop-p" style="animation-delay: 0.4s;"/>
+                  <ellipse cx="72" cy="98" rx="10" ry="3.5" stroke="#38bdf8" stroke-width="1.8" fill="none" class="water-ripple-ring"/>
+                  <ellipse cx="72" cy="98" rx="16" ry="5" stroke="#bae6fd" stroke-width="1.2" fill="none" class="water-ripple-ring" style="animation-delay: 0.35s;"/>
+                </svg>
+              </div>
+            </div>
+            <div id="gardenerBubble3D" class="gardener-3d-bubble">🌱 Let's grow ideas!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Credits & Navigation Bar -->
+      <div class="grow-footer-bar">
+        <div class="grow-footer-left">
+          <span>Designed by Aryan Kumar · NIT Agartala, India @2026</span>
+        </div>
+        <div class="grow-footer-right">
+          <button id="backToTopBtn" class="grow-footer-backtop" aria-label="Scroll back to top">
+            <span>Back to Top ↑</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+
+  <!-- =========================================================
+       DEDICATED FULL-SCREEN PROJECT DETAIL OVERLAY
+       ========================================================= -->
+  <div id="projectDetailOverlay" class="project-detail-overlay" role="dialog" aria-modal="true" aria-label="Project Details">
+    <div class="overlay-container">
+      <button id="closeOverlayBtn" class="overlay-close-btn" aria-label="Close project overlay">&times;</button>
+      <div id="projectOverlayBody">
+        <!-- Dynamically populated by project-overlay.js -->
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

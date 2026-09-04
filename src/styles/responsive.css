@@ -1,0 +1,135 @@
+/* =========================================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .case-study-bihar,
+  .case-study-decide,
+  .case-study-polytechnic,
+  .case-study-campusmesh,
+  .case-study-raksha {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .intro-visual-column {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+
+  /* Header adjustments */
+  .header-left .location-pill {
+    font-size: 0.64rem;
+    padding: 0.45rem 0.8rem;
+  }
+
+  .nav-links-list {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-pill-container {
+    padding: 0.35rem 0.6rem 0.35rem 0.35rem;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 1.5rem);
+    padding-bottom: 5rem;
+  }
+
+  .hero-vertical-tag {
+    display: none;
+  }
+
+  .hero-sun-disc {
+    top: 10%;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
+  }
+
+  .hero-audio-widget {
+    padding: 0.65rem 1rem;
+    gap: 0.8rem;
+  }
+
+  .vinyl-spool {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+  }
+
+  .audio-track-title {
+    font-size: 0.72rem;
+  }
+
+  .dual-device-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .device-phone-mockup {
+    width: 80%;
+    max-width: 240px;
+  }
+
+  .device-phone-mockup:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .playground-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-massive-wordmark {
+    font-size: 20vw;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-left .location-pill {
+    display: none;
+  }
+
+  .hero-intro-pill {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .btn-primary, .btn-secondary, .btn-cta-big {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-actions-row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,280 @@
+/* =========================================================
+   SECTION 02: WHAT I BUILD (Spacious Editorial Statement)
+   Atmospheric midnight editorial aesthetic with subtle celestial
+   accents, luminous typography, and glassmorphic concept pills.
+   ========================================================= */
+
+.editorial-statement-section {
+  position: relative;
+  background-color: var(--bg-cream);
+  padding: clamp(6.5rem, 12vw, 12.5rem) 1.5rem clamp(5.5rem, 10vw, 9.5rem) 1.5rem;
+  z-index: 20;
+  overflow: hidden;
+  transition: background-color var(--duration-normal) ease, background var(--duration-normal) ease;
+}
+
+[data-theme="night"] .editorial-statement-section {
+  background-color: #070e1c;
+  background-image: 
+    radial-gradient(circle at 62% 42%, rgba(37, 99, 235, 0.14) 0%, transparent 56%),
+    radial-gradient(circle at 18% 68%, rgba(14, 116, 144, 0.11) 0%, transparent 50%),
+    radial-gradient(circle at 82% 18%, rgba(124, 58, 237, 0.08) 0%, transparent 46%);
+}
+
+/* Atmospheric Ambient & Constellation Layer */
+.statement-atmosphere {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity var(--duration-slow) ease;
+}
+
+[data-theme="night"] .statement-atmosphere {
+  opacity: 1;
+}
+
+.statement-ambient-glow {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  width: clamp(280px, 40vw, 600px);
+  height: clamp(200px, 30vw, 400px);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(59, 130, 246, 0.18) 0%, rgba(30, 58, 138, 0.08) 50%, transparent 75%);
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+.statement-constellation-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  color: #93c5fd;
+}
+
+.const-line {
+  opacity: 0.18;
+  transition: opacity var(--duration-slow) ease;
+}
+
+.const-star {
+  fill: #93c5fd;
+  opacity: 0.45;
+  filter: drop-shadow(0 0 4px rgba(147, 197, 253, 0.6));
+}
+
+.const-star-pulse {
+  animation: constStarBreathe 4s ease-in-out infinite alternate;
+}
+
+@keyframes constStarBreathe {
+  0% { opacity: 0.3; transform: scale(0.9); }
+  100% { opacity: 0.85; transform: scale(1.3); filter: drop-shadow(0 0 8px rgba(147, 197, 253, 0.9)); }
+}
+
+.editorial-sparkle {
+  fill: #bfdbfe;
+  opacity: 0.35;
+  transform-origin: center;
+  animation: sparkleTwinkle 5s ease-in-out infinite alternate;
+}
+
+.sparkle-2 {
+  animation-delay: 2.2s;
+  animation-duration: 6s;
+}
+
+@keyframes sparkleTwinkle {
+  0% { opacity: 0.2; transform: scale(0.85) rotate(0deg); }
+  50% { opacity: 0.65; transform: scale(1.15) rotate(90deg); filter: drop-shadow(0 0 6px rgba(191, 219, 254, 0.8)); }
+  100% { opacity: 0.2; transform: scale(0.85) rotate(180deg); }
+}
+
+.statement-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.statement-annotation-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--accent-blue);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.statement-top-dot {
+  font-size: 0.7rem;
+  color: var(--accent-blue);
+}
+
+[data-theme="night"] .statement-annotation-top {
+  color: #60a5fa;
+}
+
+[data-theme="night"] .statement-top-dot {
+  color: #38bdf8;
+  text-shadow: 0 0 8px #38bdf8;
+  animation: pulseCyanDot 2.4s infinite ease-in-out;
+}
+
+@keyframes pulseCyanDot {
+  0%, 100% { opacity: 0.7; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 12px #38bdf8; }
+}
+
+/* Massive Asymmetrical Editorial Statement */
+.statement-headline-huge {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6.2vw, 6.2rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  color: var(--text-main);
+  max-width: 1100px;
+  position: relative;
+  z-index: 5;
+}
+
+.statement-headline-huge .serif-italic {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent-blue);
+  letter-spacing: -0.01em;
+  transition: all var(--duration-normal) ease;
+}
+
+[data-theme="night"] .statement-headline-huge .serif-italic {
+  background: linear-gradient(135deg, #93c5fd 0%, #dbeafe 45%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.32));
+  display: inline-block;
+}
+
+.statement-handwritten-note {
+  font-family: var(--font-hand);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: var(--accent-coral);
+  transform: rotate(-4deg);
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: all var(--duration-normal) ease;
+}
+
+[data-theme="night"] .statement-handwritten-note {
+  color: #fb7185;
+  text-shadow: 0 0 16px rgba(251, 113, 133, 0.45);
+}
+
+/* Scattered Editorial Annotations Around Text */
+.statement-cloud-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.85rem, 1.8vw, 1.8rem);
+  margin-top: clamp(3.5rem, 6vw, 5.5rem);
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+.editorial-tag-item {
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 0.95vw, 0.84rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all var(--duration-fast) var(--ease-smooth);
+  cursor: default;
+}
+
+.editorial-tag-item:hover {
+  color: var(--text-main);
+}
+
+[data-theme="night"] .editorial-tag-item {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme="night"] .editorial-tag-item:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(96, 165, 250, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35), 0 0 12px rgba(96, 165, 250, 0.18);
+}
+
+.editorial-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-yellow);
+  transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
+}
+
+[data-theme="night"] .editorial-tag-dot {
+  background: #facc15;
+  box-shadow: 0 0 6px rgba(250, 204, 21, 0.6);
+}
+
+[data-theme="night"] .editorial-tag-item:hover .editorial-tag-dot {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px #facc15;
+}
+
+/* Decorative Hand-drawn Arrow SVG */
+.statement-arrow-svg {
+  position: absolute;
+  right: 8%;
+  bottom: 12%;
+  width: clamp(90px, 14vw, 160px);
+  pointer-events: none;
+  opacity: 0.6;
+  transition: opacity var(--duration-normal) ease, filter var(--duration-normal) ease;
+}
+
+.statement-arrow-path {
+  stroke: var(--text-muted);
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 6 4;
+}
+
+[data-theme="night"] .statement-arrow-svg {
+  opacity: 0.8;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.35));
+}
+
+[data-theme="night"] .statement-arrow-path {
+  stroke: #60a5fa;
+}
+
+[data-theme="night"] .statement-arrow-svg polygon {
+  fill: #60a5fa;
+  opacity: 0.85;
+}

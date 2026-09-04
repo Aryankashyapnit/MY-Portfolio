@@ -1,0 +1,171 @@
+/* =========================================================
+   INTERACTIVE ROUND LENS CURSOR SYSTEM
+   - Crystal-Clear Round Mirror/Lens Cursor across all sections
+   - Words & elements show cleanly through with optical glass clarity
+   - Smooth hover expansion, center focal dot, and tap pulse
+   ========================================================= */
+
+/* Hide Default System Cursor globally on desktop */
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  *,
+  *::before,
+  *::after,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  [role="button"],
+  .project-card,
+  .interactive-card {
+    cursor: none !important;
+  }
+}
+
+.custom-dual-cursor {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  overflow: hidden;
+}
+
+.custom-dual-cursor.visible {
+  opacity: 1;
+}
+
+/* =========================================================
+   CRYSTAL-CLEAR ROUND MIRROR / LENS CURSOR
+   Outer wrapper strictly handles translate3d position
+   Inner body handles sizing, glass effects, hover, and tap pulse
+   ========================================================= */
+
+.cursor-mirror-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  transform: translate3d(-200px, -200px, 0);
+  opacity: 1;
+  will-change: transform;
+}
+
+.mirror-lens-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(1.5px) contrast(1.1);
+  -webkit-backdrop-filter: blur(1.5px) contrast(1.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12),
+              inset 0 0 6px rgba(255, 255, 255, 0.35);
+  will-change: transform, width, height, border-color, background;
+  transition: width 0.22s var(--ease-spring),
+              height 0.22s var(--ease-spring),
+              background 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.22s var(--ease-spring);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-theme="night"] .mirror-lens-body {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 0 12px rgba(165, 243, 252, 0.25),
+              inset 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Subtle glare ring on mirror edge */
+.mirror-glare {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 9px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+
+/* Center focal point */
+.mirror-dot {
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.9);
+  transition: transform var(--duration-fast) ease, opacity var(--duration-fast) ease;
+}
+
+/* Hovering interactive UI elements (buttons, links, cards) */
+.custom-dual-cursor.hovering .mirror-lens-body {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(165, 243, 252, 0.4),
+              inset 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.custom-dual-cursor.hovering .mirror-dot {
+  transform: scale(0.5);
+  opacity: 0.4;
+}
+
+/* Tap / Click Pulse Effect on Words/Elements */
+.mirror-lens-body.mirror-tap-pulse {
+  animation: mirrorTapPulse 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes mirrorTapPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 10px rgba(165, 243, 252, 0.3);
+  }
+  40% {
+    transform: translate(-50%, -50%) scale(1.24);
+    border-color: #a5f3fc;
+    box-shadow: 0 0 24px rgba(165, 243, 252, 0.75), inset 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 12px rgba(165, 243, 252, 0.25);
+  }
+}
+
+/* Water Droplets Canvas Overlay */
+.water-droplets-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Plant / Flower Growth Reaction */
+.flower-group {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  will-change: transform;
+}
+
+/* Responsive: Hide on Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-dual-cursor {
+    display: none !important;
+  }
+}

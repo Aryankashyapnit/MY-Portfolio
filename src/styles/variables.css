@@ -1,0 +1,128 @@
+/* =========================================================
+   DESIGN TOKENS & SYSTEM VARIABLES
+   Aryan Portfolio V4 - Creative Editorial Rebuild
+   ========================================================= */
+
+:root {
+  /* Day / Sky Mode Colors (Reference Primary Mood) */
+  --bg-sky: #7eb3f7;
+  --bg-sky-top: #5e9ef0;
+  --bg-sky-bottom: #9ac2f9;
+  --bg-sky-gradient: linear-gradient(180deg, #5b9df0 0%, #82b6f8 65%, #a4c9fa 100%);
+  
+  --bg-cream: #faf7f0;
+  --bg-cream-card: #f3eee3;
+  --bg-cream-surface: #ffffff;
+  --bg-cream-subtle: #f0eae0;
+  
+  --bg-green-meadow: #426b52;
+  --bg-green-gradient: linear-gradient(180deg, #4f7e62 0%, #365942 100%);
+  
+  --bg-sunset: #f9d8b9;
+  --bg-sunset-gradient: linear-gradient(180deg, #f5d4af 0%, #f9be8a 100%);
+
+  /* Accent & Element Colors */
+  --accent-yellow: #f8db39;
+  --accent-yellow-light: #fff275;
+  --accent-yellow-dark: #e5c317;
+  --accent-lime: #b8f047;
+  --accent-coral: #f77a62;
+  --accent-purple: #7952e8;
+  --accent-blue: #2563eb;
+  
+  /* Text Colors (Light / Sky Mode) */
+  --text-hero-primary: #ffffff;
+  --text-hero-secondary: rgba(255, 255, 255, 0.88);
+  --text-hero-muted: rgba(255, 255, 255, 0.72);
+  
+  --text-main: #191c21;
+  --text-secondary: #575e6b;
+  --text-muted: #7f8796;
+  --text-inverse: #ffffff;
+
+  /* Borders & Shadows */
+  --border-cream: rgba(25, 28, 33, 0.1);
+  --border-cream-strong: rgba(25, 28, 33, 0.2);
+  --border-glass: rgba(255, 255, 255, 0.35);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  
+  --shadow-sm: 0 2px 8px rgba(25, 28, 33, 0.05);
+  --shadow-md: 0 8px 24px rgba(25, 28, 33, 0.08);
+  --shadow-lg: 0 16px 40px rgba(25, 28, 33, 0.12);
+  --shadow-xl: 0 24px 60px rgba(25, 28, 33, 0.16);
+  --shadow-glow-yellow: 0 0 30px rgba(248, 219, 57, 0.4);
+  --shadow-glow-lime: 0 0 30px rgba(184, 240, 71, 0.4);
+
+  /* Typography Families */
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+  --font-hand: 'Caveat', cursive, sans-serif;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.12);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 180ms;
+  --duration-normal: 320ms;
+  --duration-slow: 600ms;
+
+  /* Container */
+  --max-width: 1360px;
+  --header-height: 84px;
+}
+
+/* =========================================================
+   NIGHT / MIDNIGHT SKY MODE (Sophisticated Editorial Universe)
+   ========================================================= */
+[data-theme="night"] {
+  --bg-sky: #0b172a;
+  --bg-sky-top: #0e223d;
+  --bg-sky-bottom: #050b16;
+  --bg-sky-gradient: 
+    radial-gradient(circle at 50% 32%, rgba(28, 56, 96, 0.42) 0%, transparent 62%),
+    radial-gradient(circle at 14% 20%, rgba(20, 62, 80, 0.32) 0%, transparent 52%),
+    radial-gradient(circle at 86% 16%, rgba(32, 60, 110, 0.36) 0%, transparent 58%),
+    linear-gradient(175deg, #091a32 0%, #0d2340 32%, #08172c 68%, #040914 100%);
+  
+  --bg-cream: #080f1d;
+  --bg-cream-card: #0f1a30;
+  --bg-cream-surface: #142340;
+  --bg-cream-subtle: #0b1426;
+  
+  --bg-green-meadow: #081616;
+  --bg-green-gradient: linear-gradient(180deg, #0c2020 0%, #061012 100%);
+  
+  --bg-sunset: #161128;
+  --bg-sunset-gradient: linear-gradient(180deg, #1f1538 0%, #0d0a1c 100%);
+
+  --accent-yellow: #f8db39;
+  --accent-lime: #a3e635;
+  --accent-coral: #fb7185;
+
+  --text-hero-primary: #f8fafc;
+  --text-hero-secondary: rgba(248, 250, 252, 0.9);
+  --text-hero-muted: rgba(248, 250, 252, 0.65);
+
+  --text-main: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #0f172a;
+
+  --border-cream: rgba(255, 255, 255, 0.09);
+  --border-cream-strong: rgba(255, 255, 255, 0.18);
+  --border-glass: rgba(255, 255, 255, 0.14);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
